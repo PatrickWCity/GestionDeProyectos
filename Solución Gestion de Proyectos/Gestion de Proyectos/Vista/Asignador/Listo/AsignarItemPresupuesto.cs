@@ -14,10 +14,11 @@ namespace Gestion_de_Proyectos.Vista
         ControladorItemPresupuesto cup = null;
         Presupuesto p = null;
         ControladorPresupuesto cp = null;
-        int id_presupuesto, id_item, swbn;
+        int id_presupuesto, id_item, id_item2 , swbn;
         public AsignarItemPresupuesto()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
+            l_ZonaMensaje.Text = "";
 
             swbn = (int)Properties.Settings.Default["ItemPresupuesto"];
             if (swbn == 1)
@@ -75,13 +76,14 @@ namespace Gestion_de_Proyectos.Vista
             dt1 = cup.ConsultarPorUsuariosSinPerfil();
             //verdataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt1;
-
+            l_ZonaMensaje.Text = "";
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
                 id_item = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["id_item"].Value.ToString());
+                dataGridView2.ClearSelection();
             }
             else
             {
@@ -91,7 +93,8 @@ namespace Gestion_de_Proyectos.Vista
         {
             if (e.RowIndex != -1)
             {
-                id_item = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["id_item"].Value.ToString());
+                id_item2 = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["id_item"].Value.ToString());
+                dataGridView1.ClearSelection();
             }
             else
             {
@@ -99,7 +102,14 @@ namespace Gestion_de_Proyectos.Vista
         }
         private void b_Asignar_Click(object sender, EventArgs e)
         {
-            up = new ItemPresupuesto();
+            if (((KeyValuePair<int, string>)cb_Presupuesto.SelectedItem).Key == 0)
+            {
+
+                l_ZonaMensaje.Text = "Debe selecionar un Presupuesto primero";
+            }
+            else if (id_item != 0)
+            {
+                up = new ItemPresupuesto();
             up.id_item = id_item;
             up.id_presupuesto = id_presupuesto;
             cup = new ControladorItemPresupuesto(up);
@@ -118,11 +128,24 @@ namespace Gestion_de_Proyectos.Vista
             dt1 = cup.ConsultarPorUsuariosSinPerfil();
             ///verdataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt1;
+                dataGridView1.ClearSelection();
+                id_item = 0;
+                l_ZonaMensaje.Text = "";
+            }
+            else
+                l_ZonaMensaje.Text = "Debe Seleccionar un Item sin el Presupuesto";
         }
         private void b_Desasignar_Click(object sender, EventArgs e)
         {
-            up = new ItemPresupuesto();
-            up.id_item = id_item;
+            if (((KeyValuePair<int, string>)cb_Presupuesto.SelectedItem).Key == 0)
+            {
+
+                l_ZonaMensaje.Text = "Debe selecionar un Presupuesto primero";
+            }
+            else if (id_item2 != 0)
+            {
+                up = new ItemPresupuesto();
+            up.id_item = id_item2;
             up.id_presupuesto = id_presupuesto;
             cup = new ControladorItemPresupuesto(up);
             cup.DesasignarUsuarioDePerfil();
@@ -140,6 +163,12 @@ namespace Gestion_de_Proyectos.Vista
             dt1 = cup.ConsultarPorUsuariosSinPerfil();
             ///verdataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt1;
+                dataGridView2.ClearSelection();
+                id_item2 = 0;
+                l_ZonaMensaje.Text = "";
+            }
+            else
+                l_ZonaMensaje.Text = "Debe Seleccionar un Item con el Presupuesto";
         }
         private void b_BN_Click(object sender, EventArgs e)
         {

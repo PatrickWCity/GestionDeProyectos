@@ -102,7 +102,8 @@ namespace Gestion_de_Proyectos.Vista
         }
         private void b_Asignar_Click(object sender, EventArgs e)
         {
-            if (((KeyValuePair<int, string>)cb_Perfil.SelectedItem).Key ==0) {
+            if (((KeyValuePair<int, string>)cb_Perfil.SelectedItem).Key ==0)
+            {
 
                 l_ZonaMensaje.Text = "Debe selecionar un Modulo primero";
             }
@@ -132,7 +133,7 @@ namespace Gestion_de_Proyectos.Vista
                 l_ZonaMensaje.Text = "";
             }
             else
-                l_ZonaMensaje.Text = "Debe Seleccionar un Modulo sin el Perfil";
+                l_ZonaMensaje.Text = "Debe Seleccionar un Submodulo sin el Modulo";
         }
         private void b_Desasignar_Click(object sender, EventArgs e)
         {

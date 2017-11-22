@@ -14,10 +14,11 @@ namespace Gestion_de_Proyectos.Vista
         ControladorFuenteFinanciamientoProyecto cup = null;
         Proyecto p = null;
         ControladorProyecto cp = null;//hacer
-        int id_proyecto, id_FuenteFinanciamiento, swbn;
+        int id_proyecto, id_FuenteFinanciamiento, id_FuenteFinanciamiento2, swbn;
         public AsignarFuenteFinanciamientoProyecto()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
+            l_ZonaMensaje.Text = "";
 
             swbn = (int)Properties.Settings.Default["FuenteFinanciamientoProyecto"];
             if (swbn == 1)
@@ -73,14 +74,16 @@ namespace Gestion_de_Proyectos.Vista
             //cu = new ControladorUsuario(u);
             DataTable dt1 = new DataTable();
             dt1 = cup.ConsultarPorUsuariosSinPerfil();
-            dataGridView1.DataSource = dt1;
 
+            dataGridView1.DataSource = dt1;
+            l_ZonaMensaje.Text = "";
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
                 id_FuenteFinanciamiento = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["id_fuenteFinanciamiento"].Value.ToString());
+                dataGridView2.ClearSelection();
             }
             else
             {
@@ -90,7 +93,8 @@ namespace Gestion_de_Proyectos.Vista
         {
             if (e.RowIndex != -1)
             {
-                id_FuenteFinanciamiento = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["id_fuenteFinanciamiento"].Value.ToString());
+                id_FuenteFinanciamiento2 = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["id_fuenteFinanciamiento"].Value.ToString());
+                dataGridView1.ClearSelection();
             }
             else
             {
@@ -98,7 +102,14 @@ namespace Gestion_de_Proyectos.Vista
         }
         private void b_Asignar_Click(object sender, EventArgs e)
         {
-            up = new FuenteFinanciamientoProyecto();
+            if (((KeyValuePair<int, string>)cb_Perfil.SelectedItem).Key == 0)
+            {
+
+                l_ZonaMensaje.Text = "Debe selecionar un Proyecto primero";
+            }
+            else if (id_FuenteFinanciamiento != 0)
+            {
+                up = new FuenteFinanciamientoProyecto();
             up.id_fuenteFinanciamiento = id_FuenteFinanciamiento;//
             up.id_proyecto = id_proyecto;//
             cup = new ControladorFuenteFinanciamientoProyecto(up);
@@ -117,11 +128,24 @@ namespace Gestion_de_Proyectos.Vista
             dt1 = cup.ConsultarPorUsuariosSinPerfil();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt1;
+                id_FuenteFinanciamiento = 0;
+                dataGridView1.ClearSelection();
+                l_ZonaMensaje.Text = "";
+            }
+            else
+                l_ZonaMensaje.Text = "Debe Seleccionar una Fuente de Financiamiento sin el Proyecto";
         }
         private void b_Desasignar_Click(object sender, EventArgs e)
         {
-            up = new FuenteFinanciamientoProyecto();
-            up.id_fuenteFinanciamiento = id_FuenteFinanciamiento;//
+            if (((KeyValuePair<int, string>)cb_Perfil.SelectedItem).Key == 0)
+            {
+
+                l_ZonaMensaje.Text = "Debe selecionar un Proyecto primero";
+            }
+            else if (id_FuenteFinanciamiento2 != 0)
+            {
+                up = new FuenteFinanciamientoProyecto();
+            up.id_fuenteFinanciamiento = id_FuenteFinanciamiento2;//
             up.id_proyecto = id_proyecto;//
             cup = new ControladorFuenteFinanciamientoProyecto(up);
             cup.DesasignarUsuarioDePerfil();
@@ -139,6 +163,12 @@ namespace Gestion_de_Proyectos.Vista
             dt1 = cup.ConsultarPorUsuariosSinPerfil();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt1;
+                dataGridView2.ClearSelection();
+                id_FuenteFinanciamiento2 = 0;
+                l_ZonaMensaje.Text = "";
+            }
+            else
+                l_ZonaMensaje.Text = "Debe Seleccionar una Fuente de Financiamiento con el Proyecto";
 
         }
         private void b_BN_Click(object sender, EventArgs e)

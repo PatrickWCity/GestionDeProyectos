@@ -17,7 +17,6 @@ namespace Gestion_de_Proyectos.Vista
             Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
         }
-
         private void b_Actualizar_Click(object sender, EventArgs e)
         {
             if (tb_Monto1.Text == "0" || tb_Monto1.TextLength == 0 || tb_Monto2.Text == "0" || tb_Monto2.TextLength == 0)
@@ -65,7 +64,6 @@ namespace Gestion_de_Proyectos.Vista
                 l_ZonaMensaje.Text = "Los montos de los Items fueron reitemizados con exito!";
             }
         }
-
         private void b_Restablecer_Click(object sender, EventArgs e)
         {
             tb_Id_Item1.Text = string.Empty;
@@ -75,13 +73,12 @@ namespace Gestion_de_Proyectos.Vista
             tb_Monto1.Text = string.Empty;
             tb_Monto2.Text = string.Empty;
             b_Actualizar.Enabled = false;
+            total = 0;
         }
-
         private void b_Salir_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void b_Consultar_Click(object sender, EventArgs e)
         {
             ci = new ControladorItem(i);
@@ -98,7 +95,6 @@ namespace Gestion_de_Proyectos.Vista
             dataGridView2.AutoGenerateColumns = false;
             dataGridView2.DataSource = dt2;
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -131,7 +127,6 @@ namespace Gestion_de_Proyectos.Vista
 
             }
         }
-
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -196,7 +191,18 @@ namespace Gestion_de_Proyectos.Vista
                 monto22 = int.Parse(tb_Monto2.Text);
                 editado = monto11 + monto22;
                 l_Total.Text = (total - editado).ToString();
-                b_Actualizar.Enabled = true;
+
+                if (int.Parse(tb_Monto2.Text) < 0 || int.Parse(tb_Monto2.Text) < 0)
+                {
+                    l_ZonaMensaje.Text = "No se puede guardar un Item con un valor Negativo";
+                    b_Actualizar.Enabled = false;
+                }
+                else
+                {
+                    l_ZonaMensaje.Text = "";
+                    b_Actualizar.Enabled = true;
+                }
+                //tb_Monto2.Text = (int.Parse(l_Total.Text) + int.Parse(tb_Monto2.Text)).ToString();
             }
         }
         private void tb_Monto2_TextChanged(object sender, EventArgs e)
@@ -224,7 +230,16 @@ namespace Gestion_de_Proyectos.Vista
                 monto22 = int.Parse(tb_Monto2.Text);
                 editado = monto11 + monto22;
                 l_Total.Text = (total - editado).ToString();
-                b_Actualizar.Enabled = true;
+                if (int.Parse(tb_Monto2.Text) < 0 || int.Parse(tb_Monto2.Text) < 0)
+                {
+                    l_ZonaMensaje.Text = "No se puede guardar un Item con un valor Negativo";
+                    b_Actualizar.Enabled = false;
+                }
+                else
+                {
+                    l_ZonaMensaje.Text = "";
+                    b_Actualizar.Enabled = true;
+                }
             }
         }
     }

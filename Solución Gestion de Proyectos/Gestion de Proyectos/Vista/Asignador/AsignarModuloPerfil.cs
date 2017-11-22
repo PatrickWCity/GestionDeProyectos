@@ -133,7 +133,7 @@ namespace Gestion_de_Proyectos.Vista
                 l_ZonaMensaje.Text = "";
             }
             else
-                l_ZonaMensaje.Text = "Debe Seleccionar un Usuario sin el Perfil";
+                l_ZonaMensaje.Text = "Debe Seleccionar un Modulo sin el Perfil";
         }
         private void b_Desasignar_Click(object sender, EventArgs e)
         {

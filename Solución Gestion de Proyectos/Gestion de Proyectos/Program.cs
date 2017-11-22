@@ -15,8 +15,7 @@ namespace Gestion_de_Proyectos
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Inicio());
-            Application.Run(new FormUsuario());
-            Application.Run(new AsignarSubmoduloModulo());
+            Application.Run(new Inicio());
         }
     }
 }

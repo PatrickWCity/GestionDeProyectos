@@ -14,10 +14,11 @@ namespace Gestion_de_Proyectos.Vista
         ControladorEspecialidadEmpleado cup = null;
         Especialidad p = null;//perfil
         ControladorEspecialidad cp = null;//conp
-        int id_especialidad, nroInterno, swbn;
+        int id_especialidad, nroInterno, nroInterno2, swbn;
         public AsignarEspecialidadEmpleado()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
+            l_ZonaMensaje.Text = "";
 
             swbn = (int)Properties.Settings.Default["EspecialidadEmpleado"];
             if (swbn == 1)
@@ -74,13 +75,14 @@ namespace Gestion_de_Proyectos.Vista
             DataTable dt1 = new DataTable();
             dt1 = cup.ConsultarPorEspecialidadesSinEmpleado();
             dataGridView1.DataSource = dt1;
-
+            l_ZonaMensaje.Text = "";
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
                 nroInterno = int.Parse(dataGridView1.Rows[e.RowIndex].Cells["nroInterno"].Value.ToString());
+                dataGridView2.ClearSelection();
             }
             else
             {
@@ -90,7 +92,8 @@ namespace Gestion_de_Proyectos.Vista
         {
             if (e.RowIndex != -1)
             {
-                nroInterno = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["nroInterno"].Value.ToString());
+                nroInterno2 = int.Parse(dataGridView2.Rows[e.RowIndex].Cells["nroInterno"].Value.ToString());
+                dataGridView1.ClearSelection();
             }
             else
             {
@@ -98,7 +101,14 @@ namespace Gestion_de_Proyectos.Vista
         }
         private void b_Asignar_Click(object sender, EventArgs e)
         {
-            up = new EspecialidadEmpleado();
+            if (((KeyValuePair<int, string>)cb_Perfil.SelectedItem).Key == 0)
+            {
+
+                l_ZonaMensaje.Text = "Debe selecionar un Empleado primero";
+            }
+            else if (nroInterno != 0)
+            {
+                up = new EspecialidadEmpleado();
             up.nroInterno = nroInterno;
             up.id_especialidad = id_especialidad;
             cup = new ControladorEspecialidadEmpleado(up);
@@ -115,11 +125,24 @@ namespace Gestion_de_Proyectos.Vista
             DataTable dt1 = new DataTable();
             dt1 = cup.ConsultarPorEspecialidadesSinEmpleado();
             dataGridView1.DataSource = dt1;
+                dataGridView1.ClearSelection();
+                nroInterno = 0;
+                l_ZonaMensaje.Text = "";
+            }
+            else
+                l_ZonaMensaje.Text = "Debe Seleccionar un Empleado sin la Especialidad";
         }
         private void b_Desasignar_Click(object sender, EventArgs e)
         {
-            up = new EspecialidadEmpleado();
-            up.nroInterno = nroInterno;
+            if (((KeyValuePair<int, string>)cb_Perfil.SelectedItem).Key == 0)
+            {
+
+                l_ZonaMensaje.Text = "Debe selecionar un Especialidad primero";
+            }
+            else if (nroInterno2 != 0)
+            {
+                up = new EspecialidadEmpleado();
+            up.nroInterno = nroInterno2;
             up.id_especialidad = id_especialidad;
             cup = new ControladorEspecialidadEmpleado(up);
             cup.DesasignarEspecialidadDeEmpleado();
@@ -135,6 +158,12 @@ namespace Gestion_de_Proyectos.Vista
             DataTable dt1 = new DataTable();
             dt1 = cup.ConsultarPorEspecialidadesSinEmpleado();
             dataGridView1.DataSource = dt1;
+                dataGridView2.ClearSelection();
+                nroInterno2 = 0;
+                l_ZonaMensaje.Text = "";
+            }
+            else
+                l_ZonaMensaje.Text = "Debe Seleccionar un Empleado con la Especialidad";
         }
         private void b_BN_Click(object sender, EventArgs e)
         {

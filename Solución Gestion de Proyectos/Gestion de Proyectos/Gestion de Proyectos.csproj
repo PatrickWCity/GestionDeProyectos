@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4250398E-6BE5-40D9-B315-2F71258F2292}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gestion_de_Proyectos</RootNamespace>
+    <AssemblyName>Gestion de Proyectos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon256.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\ControladorAcceso.cs" />
+    <Compile Include="Controlador\ControladorCargo.cs" />
+    <Compile Include="Controlador\ControladorCliente.cs" />
+    <Compile Include="Controlador\ControladorEmailCliente.cs" />
+    <Compile Include="Controlador\ControladorEmailUsuario.cs" />
+    <Compile Include="Controlador\ControladorEmpleadoProyecto.cs" />
+    <Compile Include="Controlador\ControladorEspecialidad.cs" />
+    <Compile Include="Controlador\ControladorEspecialidadEmpleado.cs" />
+    <Compile Include="Controlador\ControladorFuenteFinanciamiento.cs" />
+    <Compile Include="Controlador\ControladorFuenteFinanciamientoProyecto.cs" />
+    <Compile Include="Controlador\ControladorGastoEjecutado.cs" />
+    <Compile Include="Controlador\ControladorHistoricoAcceso.cs" />
+    <Compile Include="Controlador\ControladorHistoricoPassword.cs" />
+    <Compile Include="Controlador\ControladorItem.cs" />
+    <Compile Include="Controlador\ControladorItemPresupuesto.cs" />
+    <Compile Include="Controlador\ControladorLocalidad.cs" />
+    <Compile Include="Controlador\ControladorModulo.cs" />
+    <Compile Include="Controlador\ControladorModuloPerfil.cs" />
+    <Compile Include="Controlador\ControladorPerfil.cs" />
+    <Compile Include="Controlador\ControladorPresupuesto.cs" />
+    <Compile Include="Controlador\ControladorProyecto.cs" />
+    <Compile Include="Controlador\ControladorSubmodulo.cs" />
+    <Compile Include="Controlador\ControladorSubmoduloModulo.cs" />
+    <Compile Include="Controlador\ControladorTelefonoCliente.cs" />
+    <Compile Include="Controlador\ControladorTelefonoUsuario.cs" />
+    <Compile Include="Controlador\ControladorTipoFuenteFinanciamiento.cs" />
+    <Compile Include="Controlador\ControladorUsuario.cs" />
+    <Compile Include="Controlador\ControladorUsuarioPerfil.cs" />
+    <Compile Include="Modelo\Acceso.cs" />
+    <Compile Include="Modelo\Cargo.cs" />
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\Connection.cs" />
+    <Compile Include="Modelo\EmailCliente.cs" />
+    <Compile Include="Modelo\EmailUsuario.cs" />
+    <Compile Include="Modelo\EmpleadoProyecto.cs" />
+    <Compile Include="Modelo\Especialidad.cs" />
+    <Compile Include="Modelo\EspecialidadEmpleado.cs" />
+    <Compile Include="Modelo\FortalezaPassword.cs" />
+    <Compile Include="Modelo\FuenteFinanciamiento.cs" />
+    <Compile Include="Modelo\FuenteFinanciamientoProyecto.cs" />
+    <Compile Include="Modelo\GastoEjecutado.cs" />
+    <Compile Include="Modelo\HistoricoAcceso.cs" />
+    <Compile Include="Modelo\HistoricoPassword.cs" />
+    <Compile Include="Modelo\Item.cs" />
+    <Compile Include="Modelo\ItemPresupuesto.cs" />
+    <Compile Include="Modelo\Localidad.cs" />
+    <Compile Include="Modelo\Modulo.cs" />
+    <Compile Include="Modelo\ModuloPerfil.cs" />
+    <Compile Include="Modelo\MyColor.cs" />
+    <Compile Include="Modelo\Perfil.cs" />
+    <Compile Include="Modelo\Presupuesto.cs" />
+    <Compile Include="Modelo\Proyecto.cs" />
+    <Compile Include="Modelo\Submodulo.cs" />
+    <Compile Include="Modelo\SubmoduloModulo.cs" />
+    <Compile Include="Modelo\TelefonoCliente.cs" />
+    <Compile Include="Modelo\TelefonoUsuario.cs" />
+    <Compile Include="Modelo\TipoFuenteFinanciamiento.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Modelo\UsuarioPerfil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\Acceso\CambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Acceso\CambiarClave.Designer.cs">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\FormEmpleadoProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\FormEmpleadoProyecto.Designer.cs">
+      <DependentUpon>FormEmpleadoProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarEspecialidadEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarEspecialidadEmpleado.Designer.cs">
+      <DependentUpon>AsignarEspecialidadEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarFuenteFinanciamientoProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarFuenteFinanciamientoProyecto.Designer.cs">
+      <DependentUpon>AsignarFuenteFinanciamientoProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarItemPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarItemPresupuesto.Designer.cs">
+      <DependentUpon>AsignarItemPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormFuenteFinanciamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormFuenteFinanciamiento.Designer.cs">
+      <DependentUpon>FormFuenteFinanciamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormGastoEjecutado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormGastoEjecutado.Designer.cs">
+      <DependentUpon>FormGastoEjecutado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormCargo.Designer.cs">
+      <DependentUpon>FormCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormEspecialidad.Designer.cs">
+      <DependentUpon>FormEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormItem.Designer.cs">
+      <DependentUpon>FormItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormLocalidad.Designer.cs">
+      <DependentUpon>FormLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormModulo.Designer.cs">
+      <DependentUpon>FormModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormPerfil.Designer.cs">
+      <DependentUpon>FormPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormSubmodulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormSubmodulo.Designer.cs">
+      <DependentUpon>FormSubmodulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormTipoFuenteFinanciamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormTipoFuenteFinanciamiento.Designer.cs">
+      <DependentUpon>FormTipoFuenteFinanciamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mantenedor\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitados.Designer.cs">
+      <DependentUpon>ConsultarDeshabilitados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitadosPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitadosPorFecha.Designer.cs">
+      <DependentUpon>ConsultarDeshabilitadosPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitados.Designer.cs">
+      <DependentUpon>ConsultarHabilitados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitadosPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitadosPorFecha.Designer.cs">
+      <DependentUpon>ConsultarHabilitadosPorFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Acceso\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Acceso\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\AsignarModuloPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\AsignarModuloPerfil.designer.cs">
+      <DependentUpon>AsignarModuloPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarUsuarioPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\Listo\AsignarUsuarioPerfil.designer.cs">
+      <DependentUpon>AsignarUsuarioPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Asignador\AsignarSubmoduloModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Asignador\AsignarSubmoduloModulo.designer.cs">
+      <DependentUpon>AsignarSubmoduloModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPresupuesto.Designer.cs">
+      <DependentUpon>FormPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormProyecto.Designer.cs">
+      <DependentUpon>FormProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reitemizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Reitemizar.Designer.cs">
+      <DependentUpon>Reitemizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Ventana\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Ventana\Inicio.designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Ventana\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Ventana\Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\Acceso\CambiarClave.resx">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\FormEmpleadoProyecto.resx">
+      <DependentUpon>FormEmpleadoProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarEspecialidadEmpleado.resx">
+      <DependentUpon>AsignarEspecialidadEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarFuenteFinanciamientoProyecto.resx">
+      <DependentUpon>AsignarFuenteFinanciamientoProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarItemPresupuesto.resx">
+      <DependentUpon>AsignarItemPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormFuenteFinanciamiento.resx">
+      <DependentUpon>FormFuenteFinanciamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormGastoEjecutado.resx">
+      <DependentUpon>FormGastoEjecutado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormCargo.resx">
+      <DependentUpon>FormCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormEspecialidad.resx">
+      <DependentUpon>FormEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormItem.resx">
+      <DependentUpon>FormItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormLocalidad.resx">
+      <DependentUpon>FormLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormModulo.resx">
+      <DependentUpon>FormModulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormPerfil.resx">
+      <DependentUpon>FormPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormSubmodulo.resx">
+      <DependentUpon>FormSubmodulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormTipoFuenteFinanciamiento.resx">
+      <DependentUpon>FormTipoFuenteFinanciamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mantenedor\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarDeshabilitados.resx">
+      <DependentUpon>ConsultarDeshabilitados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarDeshabilitadosPorFecha.resx">
+      <DependentUpon>ConsultarDeshabilitadosPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarHabilitados.resx">
+      <DependentUpon>ConsultarHabilitados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarHabilitadosPorFecha.resx">
+      <DependentUpon>ConsultarHabilitadosPorFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Acceso\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\AsignarModuloPerfil.resx">
+      <DependentUpon>AsignarModuloPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarUsuarioPerfil.resx">
+      <DependentUpon>AsignarUsuarioPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Asignador\AsignarSubmoduloModulo.resx">
+      <DependentUpon>AsignarSubmoduloModulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPresupuesto.resx">
+      <DependentUpon>FormPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormProyecto.resx">
+      <DependentUpon>FormProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Reitemizar.resx">
+      <DependentUpon>Reitemizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Ventana\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Ventana\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon256.ico" />
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -76,7 +76,7 @@ namespace Gestion_de_Proyectos.Vista
             dt1 = cup.ConsultarPorModulosSinPerfil();
            // dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt1;
-
+            l_ZonaMensaje.Text = "";
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {

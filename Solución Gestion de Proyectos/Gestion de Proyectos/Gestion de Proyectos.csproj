@@ -155,6 +155,90 @@
     <Compile Include="Vista\Asignador\Listo\AsignarItemPresupuesto.Designer.cs">
       <DependentUpon>AsignarItemPresupuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarEspecialidadDeEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarEspecialidadDeEmpleado.Designer.cs">
+      <DependentUpon>ConsultarEspecialidadDeEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarFuenteFinanciamientoDeProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarFuenteFinanciamientoDeProyecto.Designer.cs">
+      <DependentUpon>ConsultarFuenteFinanciamientoDeProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarItemDePresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarItemDePresupuesto.Designer.cs">
+      <DependentUpon>ConsultarItemDePresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarModulosDePerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarModulosDePerfil.Designer.cs">
+      <DependentUpon>ConsultarModulosDePerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarSubmoduloDeModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarSubmoduloDeModulo.Designer.cs">
+      <DependentUpon>ConsultarSubmoduloDeModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarUsuariosDePerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ConsultasAsignador\ConsultarUsuariosDePerfil.Designer.cs">
+      <DependentUpon>ConsultarUsuariosDePerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\CantidadProyectoPorCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\CantidadProyectoPorCargo.Designer.cs">
+      <DependentUpon>CantidadProyectoPorCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultaProyectoGEPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultaProyectoGEPresupuesto.Designer.cs">
+      <DependentUpon>ConsultaProyectoGEPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarCantidadProyectosPorEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarCantidadProyectosPorEmpleado.Designer.cs">
+      <DependentUpon>ConsultarCantidadProyectosPorEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleado.Designer.cs">
+      <DependentUpon>ConsultarPorDisponibilidadEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.Designer.cs">
+      <DependentUpon>ConsultarPorDisponibilidadEmpleadoPorEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarPorProyectoPorFinalizar3SemanasAntes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarPorProyectoPorFinalizar3SemanasAntes.Designer.cs">
+      <DependentUpon>ConsultarPorProyectoPorFinalizar3SemanasAntes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarRangoMontosFuenteFinanciamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConsultarRangoMontosFuenteFinanciamiento.Designer.cs">
+      <DependentUpon>ConsultarRangoMontosFuenteFinanciamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConusltarPorRangoPorTipoFuenteFinanciamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Consultas\ConusltarPorRangoPorTipoFuenteFinanciamiento.Designer.cs">
+      <DependentUpon>ConusltarPorRangoPorTipoFuenteFinanciamiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormFuenteFinanciamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +250,12 @@
     </Compile>
     <Compile Include="Vista\FormGastoEjecutado.Designer.cs">
       <DependentUpon>FormGastoEjecutado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Grafico\Grafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Grafico\Grafico.Designer.cs">
+      <DependentUpon>Grafico.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Mantenedor\FormCargo.cs">
       <SubType>Form</SubType>
@@ -227,28 +317,28 @@
     <Compile Include="Vista\Mantenedor\FormUsuario.Designer.cs">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitados.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitados.Designer.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitados.Designer.cs">
       <DependentUpon>ConsultarDeshabilitados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitadosPorFecha.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitadosPorFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarDeshabilitadosPorFecha.Designer.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitadosPorFecha.Designer.cs">
       <DependentUpon>ConsultarDeshabilitadosPorFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitados.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitados.Designer.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitados.Designer.cs">
       <DependentUpon>ConsultarHabilitados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitadosPorFecha.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitadosPorFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\HistoricoAcceso\ConsultarHabilitadosPorFecha.Designer.cs">
+    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitadosPorFecha.Designer.cs">
       <DependentUpon>ConsultarHabilitadosPorFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Acceso\Login.cs">
@@ -366,17 +456,17 @@
     <EmbeddedResource Include="Vista\Mantenedor\FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarDeshabilitados.resx">
+    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitados.resx">
       <DependentUpon>ConsultarDeshabilitados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarDeshabilitadosPorFecha.resx">
+    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitadosPorFecha.resx">
       <DependentUpon>ConsultarDeshabilitadosPorFecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarHabilitados.resx">
+    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitados.resx">
       <DependentUpon>ConsultarHabilitados.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\HistoricoAcceso\ConsultarHabilitadosPorFecha.resx">
+    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitadosPorFecha.resx">
       <DependentUpon>ConsultarHabilitadosPorFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Acceso\Login.resx">

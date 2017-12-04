@@ -10,7 +10,8 @@ namespace Gestion_de_Proyectos.Modelo
     {
         public int id_proyecto { get; set; }
         public string nombre { get; set; }
-        public int id_presupuesto { get; set; }
         public int id_cliente { get; set; }
+        public DateTime fechaInicio { get; set; }
+        public DateTime fechaTermino { get; set; }
     }
 }

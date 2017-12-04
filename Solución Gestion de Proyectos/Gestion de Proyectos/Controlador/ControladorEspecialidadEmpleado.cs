@@ -106,5 +106,26 @@ namespace Gestion_de_Proyectos.Controlador
             }
             return dataTable;
         }
+        public DataTable ConsultarDisponibilidadEmpleadoPorEspecialidad()
+        {
+            dataTable = new DataTable();
+            try
+            {
+                con = new Connection();
+                SqlParameter[] parParameter = new SqlParameter[1];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@id_especialidad";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = especialidadEmpleado.id_especialidad;
+
+                dataTable = con.RetornaUno("sp_consultarDisponibilidadEmpleadoPorEspecialidad", parParameter);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return dataTable;
+        }
     }
 }

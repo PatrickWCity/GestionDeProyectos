@@ -11,5 +11,6 @@ namespace Gestion_de_Proyectos.Modelo
         public int id_presupuesto { get; set; }
         public int id_proyecto { get; set; }
         public string nombre { get; set; }
+        public int monto { get; set; }
     }
 }

@@ -113,5 +113,50 @@ namespace Gestion_de_Proyectos.Controlador
             }
             return dataTable;
         }
+
+        public DataTable ConsultarCantidadDeProyectoPorEmpleado()
+        {
+            dataTable = new DataTable();
+            try
+            {
+                con = new Connection();
+                SqlParameter[] parParameter = new SqlParameter[1];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@nroInterno";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = empleadoProyecto.nroInterno;
+
+                dataTable = con.RetornaUno("sp_consultarCantidadDeProyectoPorEmpleado", parParameter);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return dataTable;
+        }
+        public DataTable ConsultarCantidadDeProyectoPorCargo()
+        {
+            dataTable = new DataTable();
+            try
+            {
+                con = new Connection();
+                SqlParameter[] parParameter = new SqlParameter[1];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@id_cargo";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = empleadoProyecto.id_cargo;
+
+                dataTable = con.RetornaUno("sp_consultarCantidadDeProyectoPorCargo", parParameter);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return dataTable;
+        }
     }
 }

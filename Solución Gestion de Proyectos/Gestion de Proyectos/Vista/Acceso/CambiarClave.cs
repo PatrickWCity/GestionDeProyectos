@@ -3,7 +3,6 @@ using System.Data;
 using System.Windows.Forms;
 using Gestion_de_Proyectos.Modelo;
 using Gestion_de_Proyectos.Controlador;
-using System.Text.RegularExpressions;
 
 namespace Gestion_de_Proyectos.Vista
 {

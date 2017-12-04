@@ -106,5 +106,39 @@ namespace Gestion_de_Proyectos.Controlador
             }
             return dataTable;
         }
+
+        public DataTable ConsultarProyectosRangoMontoFuenteFinanciamiento()
+        {
+            dataTable = new DataTable();
+            try
+            {
+                con = new Connection();
+                SqlParameter[] parParameter = new SqlParameter[3];
+
+                parParameter[0] = new SqlParameter();
+                parParameter[0].ParameterName = "@id_fuenteFinanciamiento";
+                parParameter[0].SqlDbType = SqlDbType.Int;
+                parParameter[0].SqlValue = fuenteFinanciamiento.id_fuenteFinanciamiento;
+
+
+                parParameter[1] = new SqlParameter();
+                parParameter[1].ParameterName = "@monto1";
+                parParameter[1].SqlDbType = SqlDbType.Int;
+                parParameter[1].SqlValue = fuenteFinanciamiento.monto1;
+
+                parParameter[2] = new SqlParameter();
+                parParameter[2].ParameterName = "@monto2";
+                parParameter[2].SqlDbType = SqlDbType.Int;
+                parParameter[2].SqlValue = fuenteFinanciamiento.monto2;
+
+                dataTable = con.RetornaUno("sp_consultarProyectosRangoMontoFuenteFinanciamiento", parParameter);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return dataTable;
+        }
     }
 }

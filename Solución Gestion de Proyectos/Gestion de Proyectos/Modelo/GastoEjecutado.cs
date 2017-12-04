@@ -5,5 +5,6 @@ namespace Gestion_de_Proyectos.Modelo
     {
         public int id_gastoEjecutado { get; set; }
         public int id_item { get; set; }
+        public int monto { get; set; }
     }
 }

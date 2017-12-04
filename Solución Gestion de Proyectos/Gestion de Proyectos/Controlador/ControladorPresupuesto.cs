@@ -20,7 +20,7 @@ namespace Gestion_de_Proyectos.Controlador
             {
                 con = new Connection();
 
-                SqlParameter[] parParameter = new SqlParameter[2];
+                SqlParameter[] parParameter = new SqlParameter[3];
 
                 parParameter[0] = new SqlParameter();
                 parParameter[0].ParameterName = "@nombre";
@@ -32,6 +32,11 @@ namespace Gestion_de_Proyectos.Controlador
                 parParameter[1].ParameterName = "@id_proyecto";
                 parParameter[1].SqlDbType = SqlDbType.Int;
                 parParameter[1].SqlValue = presupuesto.id_proyecto;
+
+                parParameter[2] = new SqlParameter();
+                parParameter[2].ParameterName = "@monto";
+                parParameter[2].SqlDbType = SqlDbType.Int;
+                parParameter[2].SqlValue = presupuesto.monto;
 
                 con.EjecutarSP("sp_agregarPresupuesto", parParameter);
             }
@@ -46,7 +51,7 @@ namespace Gestion_de_Proyectos.Controlador
             {
                 con = new Connection();
 
-                SqlParameter[] parParameter = new SqlParameter[3];
+                SqlParameter[] parParameter = new SqlParameter[4];
 
                 parParameter[0] = new SqlParameter();
                 parParameter[0].ParameterName = "@id_presupuesto";
@@ -63,6 +68,11 @@ namespace Gestion_de_Proyectos.Controlador
                 parParameter[2].ParameterName = "@id_proyecto";
                 parParameter[2].SqlDbType = SqlDbType.Int;
                 parParameter[2].SqlValue = presupuesto.id_proyecto;
+
+                parParameter[3] = new SqlParameter();
+                parParameter[3].ParameterName = "@monto";
+                parParameter[3].SqlDbType = SqlDbType.Int;
+                parParameter[3].SqlValue = presupuesto.monto;
 
                 con.EjecutarSP("sp_actualizarPresupuesto", parParameter);
             }

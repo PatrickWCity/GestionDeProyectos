@@ -8,5 +8,8 @@ namespace Gestion_de_Proyectos.Modelo
         public string descripcion { get; set; }
 
         public string palabraClave { get; set; }
+        public int monto1 { get; set; }
+        public int monto2 { get; set; }
+
     }
 }

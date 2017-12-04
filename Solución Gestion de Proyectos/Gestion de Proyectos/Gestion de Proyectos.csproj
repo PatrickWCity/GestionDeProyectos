@@ -51,8 +51,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,214 +136,208 @@
     <Compile Include="Vista\Acceso\CambiarClave.Designer.cs">
       <DependentUpon>CambiarClave.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\FormEmpleadoProyecto.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormEmpleadoProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\FormEmpleadoProyecto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormEmpleadoProyecto.Designer.cs">
       <DependentUpon>FormEmpleadoProyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarEspecialidadEmpleado.cs">
+    <Compile Include="Vista\Proyecto\Asignador\AsignarEspecialidadEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarEspecialidadEmpleado.Designer.cs">
+    <Compile Include="Vista\Proyecto\Asignador\AsignarEspecialidadEmpleado.Designer.cs">
       <DependentUpon>AsignarEspecialidadEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarFuenteFinanciamientoProyecto.cs">
+    <Compile Include="Vista\Proyecto\Asignador\AsignarFuenteFinanciamientoProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarFuenteFinanciamientoProyecto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Asignador\AsignarFuenteFinanciamientoProyecto.Designer.cs">
       <DependentUpon>AsignarFuenteFinanciamientoProyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarItemPresupuesto.cs">
+    <Compile Include="Vista\Proyecto\Asignador\AsignarItemPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarItemPresupuesto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Asignador\AsignarItemPresupuesto.Designer.cs">
       <DependentUpon>AsignarItemPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarEspecialidadDeEmpleado.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarEspecialidadDeEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarEspecialidadDeEmpleado.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarEspecialidadDeEmpleado.Designer.cs">
       <DependentUpon>ConsultarEspecialidadDeEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarFuenteFinanciamientoDeProyecto.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarFuenteFinanciamientoDeProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarFuenteFinanciamientoDeProyecto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarFuenteFinanciamientoDeProyecto.Designer.cs">
       <DependentUpon>ConsultarFuenteFinanciamientoDeProyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarItemDePresupuesto.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarItemDePresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarItemDePresupuesto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarItemDePresupuesto.Designer.cs">
       <DependentUpon>ConsultarItemDePresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarModulosDePerfil.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarModulosDePerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarModulosDePerfil.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarModulosDePerfil.Designer.cs">
       <DependentUpon>ConsultarModulosDePerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarSubmoduloDeModulo.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarSubmoduloDeModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarSubmoduloDeModulo.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarSubmoduloDeModulo.Designer.cs">
       <DependentUpon>ConsultarSubmoduloDeModulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarUsuariosDePerfil.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarUsuariosDePerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasAsignador\ConsultarUsuariosDePerfil.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarUsuariosDePerfil.Designer.cs">
       <DependentUpon>ConsultarUsuariosDePerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\CantidadProyectoPorCargo.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarCantidadProyectosPorCargo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\CantidadProyectoPorCargo.Designer.cs">
-      <DependentUpon>CantidadProyectoPorCargo.cs</DependentUpon>
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarCantidadProyectosPorCargo.Designer.cs">
+      <DependentUpon>ConsultarCantidadProyectosPorCargo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultaProyectoGEPresupuesto.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultaProyectoGEPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultaProyectoGEPresupuesto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultaProyectoGEPresupuesto.Designer.cs">
       <DependentUpon>ConsultaProyectoGEPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarCantidadProyectosPorEmpleado.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarCantidadProyectosPorEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarCantidadProyectosPorEmpleado.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarCantidadProyectosPorEmpleado.Designer.cs">
       <DependentUpon>ConsultarCantidadProyectosPorEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleado.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleado.Designer.cs">
-      <DependentUpon>ConsultarPorDisponibilidadEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Consultas\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.Designer.cs">
       <DependentUpon>ConsultarPorDisponibilidadEmpleadoPorEspecialidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarPorProyectoPorFinalizar3SemanasAntes.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarPorProyectoPorFinalizar3SemanasAntes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarPorProyectoPorFinalizar3SemanasAntes.Designer.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarPorProyectoPorFinalizar3SemanasAntes.Designer.cs">
       <DependentUpon>ConsultarPorProyectoPorFinalizar3SemanasAntes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarRangoMontosFuenteFinanciamiento.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarPorRangoMontosFuenteFinanciamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\ConsultarRangoMontosFuenteFinanciamiento.Designer.cs">
-      <DependentUpon>ConsultarRangoMontosFuenteFinanciamiento.cs</DependentUpon>
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarPorRangoMontosFuenteFinanciamiento.Designer.cs">
+      <DependentUpon>ConsultarPorRangoMontosFuenteFinanciamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Consultas\ConusltarPorRangoPorTipoFuenteFinanciamiento.cs">
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarRangoMontosTipoFuenteFinanciamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Consultas\ConusltarPorRangoPorTipoFuenteFinanciamiento.Designer.cs">
-      <DependentUpon>ConusltarPorRangoPorTipoFuenteFinanciamiento.cs</DependentUpon>
+    <Compile Include="Vista\Proyecto\Consultar\ConsultarRangoMontosTipoFuenteFinanciamiento.Designer.cs">
+      <DependentUpon>ConsultarRangoMontosTipoFuenteFinanciamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormFuenteFinanciamiento.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormFuenteFinanciamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormFuenteFinanciamiento.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormFuenteFinanciamiento.Designer.cs">
       <DependentUpon>FormFuenteFinanciamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormGastoEjecutado.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormGastoEjecutado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormGastoEjecutado.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormGastoEjecutado.Designer.cs">
       <DependentUpon>FormGastoEjecutado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Grafico\Grafico.cs">
+    <Compile Include="Vista\Proyecto\Grafico\Grafico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Grafico\Grafico.Designer.cs">
+    <Compile Include="Vista\Proyecto\Grafico\Grafico.Designer.cs">
       <DependentUpon>Grafico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormCargo.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormCargo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormCargo.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormCargo.Designer.cs">
       <DependentUpon>FormCargo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormCliente.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormCliente.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormEspecialidad.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormEspecialidad.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormEspecialidad.Designer.cs">
       <DependentUpon>FormEspecialidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormItem.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormItem.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormItem.Designer.cs">
       <DependentUpon>FormItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormLocalidad.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormLocalidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormLocalidad.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormLocalidad.Designer.cs">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormModulo.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormModulo.Designer.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormModulo.Designer.cs">
       <DependentUpon>FormModulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormPerfil.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormPerfil.Designer.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormPerfil.Designer.cs">
       <DependentUpon>FormPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormSubmodulo.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormSubmodulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormSubmodulo.Designer.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormSubmodulo.Designer.cs">
       <DependentUpon>FormSubmodulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormTipoFuenteFinanciamiento.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormTipoFuenteFinanciamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormTipoFuenteFinanciamiento.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormTipoFuenteFinanciamiento.Designer.cs">
       <DependentUpon>FormTipoFuenteFinanciamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormUsuario.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Mantenedor\FormUsuario.Designer.cs">
+    <Compile Include="Vista\Administracion\Mantenedor\FormUsuario.Designer.cs">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitados.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarDeshabilitados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitados.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarDeshabilitados.Designer.cs">
       <DependentUpon>ConsultarDeshabilitados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitadosPorFecha.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarDeshabilitadosPorFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitadosPorFecha.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarDeshabilitadosPorFecha.Designer.cs">
       <DependentUpon>ConsultarDeshabilitadosPorFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitados.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarHabilitados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitados.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarHabilitados.Designer.cs">
       <DependentUpon>ConsultarHabilitados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitadosPorFecha.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarHabilitadosPorFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitadosPorFecha.Designer.cs">
+    <Compile Include="Vista\Administracion\Consultar\ConsultarHabilitadosPorFecha.Designer.cs">
       <DependentUpon>ConsultarHabilitadosPorFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Acceso\Login.cs">
@@ -347,52 +346,52 @@
     <Compile Include="Vista\Acceso\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\AsignarModuloPerfil.cs">
+    <Compile Include="Vista\Administracion\Asignador\AsignarModuloPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\AsignarModuloPerfil.designer.cs">
+    <Compile Include="Vista\Administracion\Asignador\AsignarModuloPerfil.designer.cs">
       <DependentUpon>AsignarModuloPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarUsuarioPerfil.cs">
+    <Compile Include="Vista\Administracion\Asignador\AsignarUsuarioPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\Listo\AsignarUsuarioPerfil.designer.cs">
+    <Compile Include="Vista\Administracion\Asignador\AsignarUsuarioPerfil.designer.cs">
       <DependentUpon>AsignarUsuarioPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Asignador\AsignarSubmoduloModulo.cs">
+    <Compile Include="Vista\Administracion\Asignador\AsignarSubmoduloModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Asignador\AsignarSubmoduloModulo.designer.cs">
+    <Compile Include="Vista\Administracion\Asignador\AsignarSubmoduloModulo.designer.cs">
       <DependentUpon>AsignarSubmoduloModulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormPresupuesto.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormPresupuesto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormPresupuesto.Designer.cs">
       <DependentUpon>FormPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FormProyecto.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\FormProyecto.Designer.cs">
+    <Compile Include="Vista\Proyecto\Mantenedor\FormProyecto.Designer.cs">
       <DependentUpon>FormProyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Reitemizar.cs">
+    <Compile Include="Vista\Proyecto\Reitemizar\Reitemizar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Reitemizar.Designer.cs">
+    <Compile Include="Vista\Proyecto\Reitemizar\Reitemizar.Designer.cs">
       <DependentUpon>Reitemizar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Ventana\Inicio.cs">
+    <Compile Include="Vista\Acceso\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Ventana\Inicio.designer.cs">
+    <Compile Include="Vista\Acceso\Inicio.designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Ventana\Menu.cs">
+    <Compile Include="Vista\Acceso\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Ventana\Menu.designer.cs">
+    <Compile Include="Vista\Acceso\Menu.designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -408,92 +407,134 @@
     <EmbeddedResource Include="Vista\Acceso\CambiarClave.resx">
       <DependentUpon>CambiarClave.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\FormEmpleadoProyecto.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormEmpleadoProyecto.resx">
       <DependentUpon>FormEmpleadoProyecto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarEspecialidadEmpleado.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Asignador\AsignarEspecialidadEmpleado.resx">
       <DependentUpon>AsignarEspecialidadEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarFuenteFinanciamientoProyecto.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Asignador\AsignarFuenteFinanciamientoProyecto.resx">
       <DependentUpon>AsignarFuenteFinanciamientoProyecto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarItemPresupuesto.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Asignador\AsignarItemPresupuesto.resx">
       <DependentUpon>AsignarItemPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormFuenteFinanciamiento.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarEspecialidadDeEmpleado.resx">
+      <DependentUpon>ConsultarEspecialidadDeEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarFuenteFinanciamientoDeProyecto.resx">
+      <DependentUpon>ConsultarFuenteFinanciamientoDeProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarItemDePresupuesto.resx">
+      <DependentUpon>ConsultarItemDePresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarModulosDePerfil.resx">
+      <DependentUpon>ConsultarModulosDePerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarSubmoduloDeModulo.resx">
+      <DependentUpon>ConsultarSubmoduloDeModulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarUsuariosDePerfil.resx">
+      <DependentUpon>ConsultarUsuariosDePerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultaProyectoGEPresupuesto.resx">
+      <DependentUpon>ConsultaProyectoGEPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarCantidadProyectosPorCargo.resx">
+      <DependentUpon>ConsultarCantidadProyectosPorCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarCantidadProyectosPorEmpleado.resx">
+      <DependentUpon>ConsultarCantidadProyectosPorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarPorDisponibilidadEmpleadoPorEspecialidad.resx">
+      <DependentUpon>ConsultarPorDisponibilidadEmpleadoPorEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarPorProyectoPorFinalizar3SemanasAntes.resx">
+      <DependentUpon>ConsultarPorProyectoPorFinalizar3SemanasAntes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarPorRangoMontosFuenteFinanciamiento.resx">
+      <DependentUpon>ConsultarPorRangoMontosFuenteFinanciamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Consultar\ConsultarRangoMontosTipoFuenteFinanciamiento.resx">
+      <DependentUpon>ConsultarRangoMontosTipoFuenteFinanciamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormFuenteFinanciamiento.resx">
       <DependentUpon>FormFuenteFinanciamiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormGastoEjecutado.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormGastoEjecutado.resx">
       <DependentUpon>FormGastoEjecutado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormCargo.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Grafico\Grafico.resx">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormCargo.resx">
       <DependentUpon>FormCargo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormCliente.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormEspecialidad.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormEspecialidad.resx">
       <DependentUpon>FormEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormItem.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormItem.resx">
       <DependentUpon>FormItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormLocalidad.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormLocalidad.resx">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormModulo.resx">
+    <EmbeddedResource Include="Vista\Administracion\Mantenedor\FormModulo.resx">
       <DependentUpon>FormModulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormPerfil.resx">
+    <EmbeddedResource Include="Vista\Administracion\Mantenedor\FormPerfil.resx">
       <DependentUpon>FormPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormSubmodulo.resx">
+    <EmbeddedResource Include="Vista\Administracion\Mantenedor\FormSubmodulo.resx">
       <DependentUpon>FormSubmodulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormTipoFuenteFinanciamiento.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormTipoFuenteFinanciamiento.resx">
       <DependentUpon>FormTipoFuenteFinanciamiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mantenedor\FormUsuario.resx">
+    <EmbeddedResource Include="Vista\Administracion\Mantenedor\FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitados.resx">
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarDeshabilitados.resx">
       <DependentUpon>ConsultarDeshabilitados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarDeshabilitadosPorFecha.resx">
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarDeshabilitadosPorFecha.resx">
       <DependentUpon>ConsultarDeshabilitadosPorFecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitados.resx">
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarHabilitados.resx">
       <DependentUpon>ConsultarHabilitados.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ConsultasHistoricoAcceso\ConsultarHabilitadosPorFecha.resx">
+    <EmbeddedResource Include="Vista\Administracion\Consultar\ConsultarHabilitadosPorFecha.resx">
       <DependentUpon>ConsultarHabilitadosPorFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Acceso\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\AsignarModuloPerfil.resx">
+    <EmbeddedResource Include="Vista\Administracion\Asignador\AsignarModuloPerfil.resx">
       <DependentUpon>AsignarModuloPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\Listo\AsignarUsuarioPerfil.resx">
+    <EmbeddedResource Include="Vista\Administracion\Asignador\AsignarUsuarioPerfil.resx">
       <DependentUpon>AsignarUsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Asignador\AsignarSubmoduloModulo.resx">
+    <EmbeddedResource Include="Vista\Administracion\Asignador\AsignarSubmoduloModulo.resx">
       <DependentUpon>AsignarSubmoduloModulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormPresupuesto.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormPresupuesto.resx">
       <DependentUpon>FormPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FormProyecto.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Mantenedor\FormProyecto.resx">
       <DependentUpon>FormProyecto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Reitemizar.resx">
+    <EmbeddedResource Include="Vista\Proyecto\Reitemizar\Reitemizar.resx">
       <DependentUpon>Reitemizar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Ventana\Inicio.resx">
+    <EmbeddedResource Include="Vista\Acceso\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Ventana\Menu.resx">
+    <EmbeddedResource Include="Vista\Acceso\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -521,6 +562,9 @@
   <ItemGroup>
     <None Include="Resources\icon256.ico" />
     <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Gestion_de_Proyectos.Modelo;
 using Gestion_de_Proyectos.Controlador;
+using System.Drawing;
 
 namespace Gestion_de_Proyectos.Vista
 {
@@ -12,9 +13,19 @@ namespace Gestion_de_Proyectos.Vista
         ControladorHistoricoAcceso cha = null;
         DateTime fechaInicio;
         DateTime fechaFinal;
+        int swbn;
         public ConsultarDeshabilitadosPorFecha()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
+            swbn = (int)Properties.Settings.Default["CDF"];
+            if (swbn == 1)
+            {
+                BackColor = DefaultForeColor;
+            }
+            else
+            {
+                BackColor = Color.Orange;
+            }
         }
 
         private void b_Consultar_Click(object sender, EventArgs e)
@@ -78,6 +89,27 @@ namespace Gestion_de_Proyectos.Vista
         private void b_salir_Click(object sender, EventArgs e)
         {
             this.Close(); //this.Dispose();
+        }
+
+        private void b_BN_Click(object sender, EventArgs e)
+        {
+            if (swbn == 0)
+            {
+                l_FechaFinal.ForeColor = DefaultBackColor;
+                l_FechaInicio.ForeColor = DefaultBackColor;
+                l_ZonaMensaje.ForeColor = DefaultBackColor;
+                swbn = 1;
+            }
+            else
+            {
+                l_FechaFinal.ForeColor = DefaultForeColor;
+                l_FechaInicio.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                BackColor = Color.Orange;
+                swbn = 0;
+            }
+            Properties.Settings.Default["CDF"] = swbn;
+            Properties.Settings.Default.Save();
         }
     }
 }

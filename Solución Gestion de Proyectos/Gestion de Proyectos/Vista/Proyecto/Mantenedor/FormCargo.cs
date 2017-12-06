@@ -16,6 +16,7 @@ namespace Gestion_de_Proyectos.Vista
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+            l_ZonaMensaje.Text = "";
         }
         private void b_Guardar_Click(object sender, EventArgs e)
         {
@@ -44,6 +45,13 @@ namespace Gestion_de_Proyectos.Vista
                     tb_Nombre.Text = string.Empty;
                     tb_Descripcion.Text = string.Empty;
 
+                    cc = new ControladorCargo(c);
+                    DataTable dt = new DataTable();
+                    dt = cc.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
+
                 }
                 else if (tb_Descripcion.TextLength > 255)
                 {
@@ -59,6 +67,13 @@ namespace Gestion_de_Proyectos.Vista
                     l_ZonaMensaje.Text="Cargo fue ingresado con exito!";
                     tb_Nombre.Text = string.Empty;
                     tb_Descripcion.Text = string.Empty;
+
+                    cc = new ControladorCargo(c);
+                    DataTable dt = new DataTable();
+                    dt = cc.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
             }
         }
@@ -94,6 +109,13 @@ namespace Gestion_de_Proyectos.Vista
                     b_Guardar.Enabled = true;
                     b_Actualizar.Enabled = false;
                     b_Eliminar.Enabled = false;
+
+                    cc = new ControladorCargo(c);
+                    DataTable dt = new DataTable();
+                    dt = cc.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
                 else if (tb_Descripcion.TextLength > 255)
                 {
@@ -115,14 +137,18 @@ namespace Gestion_de_Proyectos.Vista
                     b_Guardar.Enabled = true;
                     b_Actualizar.Enabled = false;
                     b_Eliminar.Enabled = false;
+
+                    cc = new ControladorCargo(c);
+                    DataTable dt = new DataTable();
+                    dt = cc.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
             }
         }
         private void b_Eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Esta seguro que quiere Eliminar este Cargo ?", "Alerta", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
                 c = new Cargo();
                 c.id_cargo = int.Parse(tb_Id_Cargo.Text);
                 cc = new ControladorCargo(c);
@@ -139,15 +165,13 @@ namespace Gestion_de_Proyectos.Vista
                 b_Actualizar.Enabled = false;
                 b_Eliminar.Enabled = false;
                 b_Guardar.Enabled = true;
-            }
-            else if (result == DialogResult.No)
-            {
-                l_ZonaMensaje.Text = "Cancelo la Eliminacion de usuario";
-            }
-            else
-            {
-                l_ZonaMensaje.Text="La accion fue Cancelada!";
-            }
+
+            cc = new ControladorCargo(c);
+            DataTable dt = new DataTable();
+            dt = cc.ConsultarPorTodos();
+            dataGridView1.Refresh();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = dt;
         }
         private void b_Consultar_Click(object sender, EventArgs e)
         {

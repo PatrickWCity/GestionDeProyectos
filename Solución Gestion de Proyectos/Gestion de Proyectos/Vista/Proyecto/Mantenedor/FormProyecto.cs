@@ -21,6 +21,9 @@ namespace Gestion_de_Proyectos.Vista
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
 
+            l_ZonaMensaje.Text = "";
+
+
             DataTable dt = new DataTable();//presupuesto
             DataTable dt1 = new DataTable();//cliente
            cp = new ControladorPresupuesto(p);
@@ -183,7 +186,8 @@ namespace Gestion_de_Proyectos.Vista
             if (e.RowIndex != -1)
             {
                 tb_Id_Proyecto.Text = dataGridView1.Rows[e.RowIndex].Cells["id_proyecto"].Value.ToString();
-                cb_Cliente.SelectedItem = dataGridView1.Rows[e.RowIndex].Cells["id_cliente"].Value.ToString();// ver
+                tb_Nombre.Text = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                cb_Cliente.Text = dataGridView1.Rows[e.RowIndex].Cells["cliente"].Value.ToString();// ver
                 dateTimePicker1.Value = (DateTime)dataGridView1.Rows[e.RowIndex].Cells["fechaInicio"].Value;
                 dateTimePicker2.Value = (DateTime)dataGridView1.Rows[e.RowIndex].Cells["fechaTermino"].Value;
                 b_Guardar.Enabled = false;
@@ -194,16 +198,6 @@ namespace Gestion_de_Proyectos.Vista
             {
 
             }
-        }
-
-        private void l_ZonaMensaje_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

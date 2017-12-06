@@ -43,6 +43,7 @@
             this.l_FechaInicio = new System.Windows.Forms.Label();
             this.tb_FechaFinal = new System.Windows.Forms.TextBox();
             this.tb_FechaInicio = new System.Windows.Forms.TextBox();
+            this.b_BN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             this.b_salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_salir.Location = new System.Drawing.Point(541, 430);
+            this.b_salir.Location = new System.Drawing.Point(469, 430);
             this.b_salir.Name = "b_salir";
             this.b_salir.Size = new System.Drawing.Size(75, 23);
             this.b_salir.TabIndex = 8;
@@ -62,7 +63,7 @@
             // 
             this.b_Consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.b_Consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Consultar.Location = new System.Drawing.Point(460, 430);
+            this.b_Consultar.Location = new System.Drawing.Point(388, 430);
             this.b_Consultar.Name = "b_Consultar";
             this.b_Consultar.Size = new System.Drawing.Size(75, 23);
             this.b_Consultar.TabIndex = 7;
@@ -147,7 +148,7 @@
             // 
             this.l_ZonaMensaje.AutoSize = true;
             this.l_ZonaMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_ZonaMensaje.Location = new System.Drawing.Point(472, 447);
+            this.l_ZonaMensaje.Location = new System.Drawing.Point(400, 455);
             this.l_ZonaMensaje.Name = "l_ZonaMensaje";
             this.l_ZonaMensaje.Size = new System.Drawing.Size(0, 13);
             this.l_ZonaMensaje.TabIndex = 18;
@@ -156,7 +157,7 @@
             // 
             this.l_FechaFinal.AutoSize = true;
             this.l_FechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_FechaFinal.Location = new System.Drawing.Point(204, 443);
+            this.l_FechaFinal.Location = new System.Drawing.Point(203, 435);
             this.l_FechaFinal.Name = "l_FechaFinal";
             this.l_FechaFinal.Size = new System.Drawing.Size(73, 13);
             this.l_FechaFinal.TabIndex = 17;
@@ -166,7 +167,7 @@
             // 
             this.l_FechaInicio.AutoSize = true;
             this.l_FechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_FechaInicio.Location = new System.Drawing.Point(12, 443);
+            this.l_FechaInicio.Location = new System.Drawing.Point(12, 435);
             this.l_FechaInicio.Name = "l_FechaInicio";
             this.l_FechaInicio.Size = new System.Drawing.Size(80, 13);
             this.l_FechaInicio.TabIndex = 16;
@@ -174,23 +175,40 @@
             // 
             // tb_FechaFinal
             // 
-            this.tb_FechaFinal.Location = new System.Drawing.Point(283, 440);
+            this.tb_FechaFinal.Location = new System.Drawing.Point(282, 432);
             this.tb_FechaFinal.Name = "tb_FechaFinal";
             this.tb_FechaFinal.Size = new System.Drawing.Size(100, 20);
             this.tb_FechaFinal.TabIndex = 15;
             // 
             // tb_FechaInicio
             // 
-            this.tb_FechaInicio.Location = new System.Drawing.Point(98, 440);
+            this.tb_FechaInicio.Location = new System.Drawing.Point(98, 432);
             this.tb_FechaInicio.Name = "tb_FechaInicio";
             this.tb_FechaInicio.Size = new System.Drawing.Size(100, 20);
             this.tb_FechaInicio.TabIndex = 14;
+            // 
+            // b_BN
+            // 
+            this.b_BN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_BN.AutoSize = true;
+            this.b_BN.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.b_BN.BackColor = System.Drawing.Color.Black;
+            this.b_BN.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_BN.ForeColor = System.Drawing.Color.White;
+            this.b_BN.Location = new System.Drawing.Point(576, 429);
+            this.b_BN.Name = "b_BN";
+            this.b_BN.Size = new System.Drawing.Size(40, 24);
+            this.b_BN.TabIndex = 19;
+            this.b_BN.Text = "B/N";
+            this.b_BN.UseVisualStyleBackColor = false;
+            this.b_BN.Click += new System.EventHandler(this.b_BN_Click);
             // 
             // ConsultarDeshabilitadosPorFecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 465);
+            this.Controls.Add(this.b_BN);
             this.Controls.Add(this.l_ZonaMensaje);
             this.Controls.Add(this.l_FechaFinal);
             this.Controls.Add(this.l_FechaInicio);
@@ -201,6 +219,7 @@
             this.Controls.Add(this.dataGridView1);
             this.MinimumSize = new System.Drawing.Size(644, 504);
             this.Name = "ConsultarDeshabilitadosPorFecha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultarDeshabilitadosPorFecha";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -225,5 +244,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn apmat;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.Button b_BN;
     }
 }

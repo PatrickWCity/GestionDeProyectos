@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Gestion_de_Proyectos.Modelo;
 using Gestion_de_Proyectos.Controlador;
+using System.Drawing;
 
 namespace Gestion_de_Proyectos.Vista
 {
@@ -10,12 +11,35 @@ namespace Gestion_de_Proyectos.Vista
     {
         Perfil p = null;
         ControladorPerfil cp = null;
-        int id_Perfil;
+        int id_Perfil,swbn;
         public FormPerfil()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
+            l_ZonaMensaje.Text = "";
             b_Eliminar.Enabled = false;
+
+            swbn = (int)Properties.Settings.Default["Perfil"];
+            if (swbn == 1)
+            {
+                l_Descripcion.ForeColor = DefaultBackColor;
+                l_Id_Perfil.ForeColor = DefaultBackColor;
+                l_Nombre.ForeColor = DefaultBackColor;
+                l_PalabraClave.ForeColor = DefaultBackColor;
+                l_ZonaMensaje.ForeColor = DefaultBackColor;
+
+                BackColor = DefaultForeColor;
+            }
+            else
+            {
+                l_Descripcion.ForeColor = DefaultForeColor;
+                l_Id_Perfil.ForeColor = DefaultForeColor;
+                l_Nombre.ForeColor = DefaultForeColor;
+                l_PalabraClave.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                BackColor = Color.LightSalmon;
+            }
         }
         private void b_Guardar_Click(object sender, EventArgs e)
         {
@@ -43,6 +67,11 @@ namespace Gestion_de_Proyectos.Vista
                     l_ZonaMensaje.Text="Perfil fue ingresado con exito!";
                     tb_Nombre.Text = string.Empty;
                     tb_Descripcion.Text = string.Empty;
+
+                    cp = new ControladorPerfil(p);
+                    DataTable dt = new DataTable();
+                    dt = cp.ConsultarPorTodos();
+                    dataGridView1.DataSource = dt;
                 }
                 else if (tb_Descripcion.TextLength > 255)
                 {
@@ -58,6 +87,11 @@ namespace Gestion_de_Proyectos.Vista
                     l_ZonaMensaje.Text="Perfil fue ingresado con exito!";
                     tb_Nombre.Text = string.Empty;
                     tb_Descripcion.Text = string.Empty;
+
+                    cp = new ControladorPerfil(p);
+                    DataTable dt = new DataTable();
+                    dt = cp.ConsultarPorTodos();
+                    dataGridView1.DataSource = dt;
                 }
             }
         }
@@ -97,6 +131,11 @@ namespace Gestion_de_Proyectos.Vista
                     b_Guardar.Enabled = true;
                     b_Actualizar.Enabled = false;
                     b_Eliminar.Enabled = false;
+
+                    cp = new ControladorPerfil(p);
+                    DataTable dt = new DataTable();
+                    dt = cp.ConsultarPorTodos();
+                    dataGridView1.DataSource = dt;
                 }
                 else if (tb_Descripcion.TextLength > 255)
                 {
@@ -120,6 +159,11 @@ namespace Gestion_de_Proyectos.Vista
                     b_Guardar.Enabled = true;
                     b_Actualizar.Enabled = false;
                     b_Eliminar.Enabled = false;
+
+                    cp = new ControladorPerfil(p);
+                    DataTable dt = new DataTable();
+                    dt = cp.ConsultarPorTodos();
+                    dataGridView1.DataSource = dt;
                 }
             }
         }
@@ -144,6 +188,11 @@ namespace Gestion_de_Proyectos.Vista
                 b_Actualizar.Enabled = false;
                 b_Eliminar.Enabled = false;
                 b_Guardar.Enabled = true;
+
+                cp = new ControladorPerfil(p);
+                DataTable dt = new DataTable();
+                dt = cp.ConsultarPorTodos();
+                dataGridView1.DataSource = dt;
             }
             else if (result == DialogResult.No)
             {
@@ -328,6 +377,36 @@ namespace Gestion_de_Proyectos.Vista
             {
 
             }
+        }
+
+        private void b_BN_Click(object sender, EventArgs e)
+        {
+            if (swbn == 0)
+            {
+
+                l_Descripcion.ForeColor = DefaultBackColor;
+                l_Id_Perfil.ForeColor = DefaultBackColor;
+                l_Nombre.ForeColor = DefaultBackColor;
+                l_PalabraClave.ForeColor = DefaultBackColor;
+                l_ZonaMensaje.ForeColor = DefaultBackColor;
+
+                BackColor = DefaultForeColor;
+                swbn = 1;
+            }
+            else
+            {
+                l_Descripcion.ForeColor = DefaultForeColor;
+                l_Id_Perfil.ForeColor = DefaultForeColor;
+                l_Nombre.ForeColor = DefaultForeColor;
+                l_PalabraClave.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                BackColor = Color.LightSalmon;
+                swbn = 0;
+            }
+            Properties.Settings.Default["Perfil"] = swbn;
+            Properties.Settings.Default.Save();
         }
     }
 }

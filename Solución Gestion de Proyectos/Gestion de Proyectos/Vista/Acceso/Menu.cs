@@ -17,6 +17,8 @@ namespace Gestion_de_Proyectos.Vista
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close(); //this.Dispose();
+            Login l = new Login();
+            l.Show();
         }
         private void moduloAPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {

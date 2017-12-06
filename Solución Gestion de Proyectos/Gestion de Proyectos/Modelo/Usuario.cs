@@ -11,6 +11,8 @@ namespace Gestion_de_Proyectos.Modelo
         public string direccion { get; set; }
         public int id_localidad { get; set; }
 
+        public int telefono { get; set; }
+        public string email { get; set; }
         public string palabraClave { get; set; }
     }
 }

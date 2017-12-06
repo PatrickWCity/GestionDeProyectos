@@ -19,6 +19,9 @@ namespace Gestion_de_Proyectos.Vista
             b_Eliminar.Enabled = false;
             l_ZonaMensaje.Text = string.Empty;
 
+            l_ZonaMensaje.Text = "";
+
+
             cl = new ControladorLocalidad(l);
             DataTable dt = new DataTable();
             dt = cl.ConsultarPorTodos();

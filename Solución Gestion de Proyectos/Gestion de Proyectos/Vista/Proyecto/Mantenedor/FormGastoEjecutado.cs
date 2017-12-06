@@ -22,6 +22,8 @@ namespace Gestion_de_Proyectos.Vista
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
 
+            l_ZonaMensaje.Text = "";
+
             DataTable dt = new DataTable();//presupuesto
             DataTable dt1 = new DataTable();//cliente
             cc = new ControladorItem(c);

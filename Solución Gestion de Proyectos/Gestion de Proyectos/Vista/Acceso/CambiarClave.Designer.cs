@@ -39,6 +39,7 @@
             this.b_CambiarClave = new System.Windows.Forms.Button();
             this.b_Cancelar = new System.Windows.Forms.Button();
             this.l_ZonaMensaje = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // l_Username
@@ -162,12 +163,27 @@
             this.l_ZonaMensaje.TabIndex = 10;
             this.l_ZonaMensaje.Text = "Zona de Mensaje";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSize = true;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(155, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 29);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Restablecer";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CambiarClave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(245)))), ((int)(((byte)(220)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.l_ZonaMensaje);
             this.Controls.Add(this.b_Cancelar);
             this.Controls.Add(this.b_CambiarClave);
@@ -200,5 +216,6 @@
         private System.Windows.Forms.Button b_CambiarClave;
         private System.Windows.Forms.Button b_Cancelar;
         private System.Windows.Forms.Label l_ZonaMensaje;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -13,13 +13,13 @@ namespace Gestion_de_Proyectos.Vista
         ControladorCliente cc = null;
         Localidad p = null;
         ControladorLocalidad cp = null;
-        int id_cliente;
+        int id_cliente, telefono;
         public FormCliente()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
-
+            l_ZonaMensaje.Text = "";
             cp = new ControladorLocalidad(p);
             DataTable dt = new DataTable();
             DataTable dt1 = new DataTable();
@@ -72,17 +72,52 @@ namespace Gestion_de_Proyectos.Vista
                     }
                     else
                     {
-                        c = new Cliente();
-                        c.rut = tb_Rut.Text;
-                        c.nombre = tb_Nombre.Text;
-                        c.domicilio = tb_Domicilio.Text;
-                        cc = new ControladorCliente(c);
-                        cc.Ingresar();
+                        if (tb_Telefono.TextLength <= 7 || tb_Telefono.TextLength >= 12)
+                        {
+                            l_ZonaMensaje.Text = "El telefono debe ser de 8-11 digitos";
+                        }
+                        else if (!int.TryParse(tb_Telefono.Text, out telefono))
+                        {
+                            l_ZonaMensaje.Text = "Numero invalido";
+                        }
+                        else
+                        {
+                            if (tb_Email.TextLength == 0)
+                            {
+                                l_ZonaMensaje.Text = "Debe ingresar un correo";
+                            }
+                            else if (tb_Email.TextLength >= 256)
+                            {
+                                l_ZonaMensaje.Text = "debe ingresar un correo de 255 caracteres o menos";
+                            }
+                            else
+                            {
+                                c = new Cliente();
+                                c.rut = tb_Rut.Text;
+                                c.nombre = tb_Nombre.Text;
+                                c.domicilio = tb_Domicilio.Text;
+                                c.id_localidad = ((KeyValuePair<int, string>)comboBox1.SelectedItem).Key;
+                                c.telefono = int.Parse(tb_Telefono.Text);
+                                c.email = tb_Email.Text;
+                                cc = new ControladorCliente(c);
+                                cc.Ingresar();
 
-                        l_ZonaMensaje.Text="Cliente fue ingresado con exito!";
-                        tb_Rut.Text = string.Empty;
-                        tb_Nombre.Text = string.Empty;
-                        tb_Domicilio.Text = string.Empty;
+                                l_ZonaMensaje.Text = "Cliente fue ingresado con exito!";
+                                tb_Rut.Text = string.Empty;
+                                tb_Nombre.Text = string.Empty;
+                                tb_Domicilio.Text = string.Empty;
+                                tb_Email.Text = string.Empty;
+                                tb_Telefono.Text = string.Empty;
+                                comboBox1.SelectedIndex = 0;
+
+                                cc = new ControladorCliente(c);
+                                DataTable dt = new DataTable();
+                                dt = cc.ConsultarPorTodos();
+                                dataGridView1.Refresh();
+                                dataGridView1.AutoGenerateColumns = false;
+                                dataGridView1.DataSource = dt;
+                            }
+                        }
                     }
                 }
             }
@@ -130,23 +165,57 @@ namespace Gestion_de_Proyectos.Vista
                     }
                     else
                     {
-                        c = new Cliente();
-                        c.id_cliente = int.Parse(tb_Id_Cliente.Text);
-                        c.rut = tb_Rut.Text;
-                        c.nombre = tb_Nombre.Text;
-                        c.domicilio = tb_Domicilio.Text;
-                        cc = new ControladorCliente(c);
-                        cc.Actualizar();
-                        dataGridView1.Refresh();
-                        l_ZonaMensaje.Text="Cliente fue actualizado con exito!";
+                        if (tb_Telefono.TextLength <= 7 || tb_Telefono.TextLength >= 12)
+                        {
+                            l_ZonaMensaje.Text = "El telefono debe ser de 8-11 digitos";
+                        }
+                        else if (!int.TryParse(tb_Telefono.Text, out telefono))
+                        {
+                            l_ZonaMensaje.Text = "Numero invalido";
+                        }
+                        else
+                        {
+                            if (tb_Email.TextLength == 0)
+                            {
+                                l_ZonaMensaje.Text = "Debe ingresar un correo";
+                            }
+                            else if (tb_Email.TextLength >= 256)
+                            {
+                                l_ZonaMensaje.Text = "debe ingresar un correo de 255 caracteres o menos";
+                            }
+                            else
+                            {
+                                c = new Cliente();
+                                c.id_cliente = int.Parse(tb_Id_Cliente.Text);
+                                c.rut = tb_Rut.Text;
+                                c.nombre = tb_Nombre.Text;
+                                c.domicilio = tb_Domicilio.Text;
+                                c.id_localidad = ((KeyValuePair<int, string>)comboBox1.SelectedItem).Key;
+                                c.telefono = int.Parse(tb_Telefono.Text);
+                                c.email = tb_Email.Text;
+                                cc = new ControladorCliente(c);
+                                cc.Actualizar();
+                                dataGridView1.Refresh();
+                                l_ZonaMensaje.Text = "Cliente fue actualizado con exito!";
 
-                        tb_Id_Cliente.Text = string.Empty;
-                        tb_Rut.Text = string.Empty;
-                        tb_Nombre.Text = string.Empty;
-                        tb_Domicilio.Text = string.Empty;
-                        b_Guardar.Enabled = true;
-                        b_Actualizar.Enabled = false;
-                        b_Eliminar.Enabled = false;
+                                tb_Id_Cliente.Text = string.Empty;
+                                tb_Rut.Text = string.Empty;
+                                tb_Nombre.Text = string.Empty;
+                                tb_Domicilio.Text = string.Empty;
+                                tb_Email.Text = string.Empty;
+                                tb_Telefono.Text = string.Empty;
+                                comboBox1.SelectedIndex = 0;
+                                b_Guardar.Enabled = true;
+                                b_Actualizar.Enabled = false;
+                                b_Eliminar.Enabled = false;
+                                cc = new ControladorCliente(c);
+                                DataTable dt = new DataTable();
+                                dt = cc.ConsultarPorTodos();
+                                dataGridView1.Refresh();
+                                dataGridView1.AutoGenerateColumns = false;
+                                dataGridView1.DataSource = dt;
+                            }
+                        }
                     }
 
                 }
@@ -165,9 +234,6 @@ namespace Gestion_de_Proyectos.Vista
         }
         private void b_Eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Esta seguro que quiere Eliminar este Cliente ?", "Alerta", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
                 c = new Cliente();
                 c.id_cliente = int.Parse(tb_Id_Cliente.Text);
                 cc = new ControladorCliente(c);
@@ -184,15 +250,15 @@ namespace Gestion_de_Proyectos.Vista
                 b_Actualizar.Enabled = false;
                 b_Eliminar.Enabled = false;
                 b_Guardar.Enabled = true;
-            }
-            else if (result == DialogResult.No)
-            {
-                l_ZonaMensaje.Text = "Cancelo la Eliminacion de usuario";
-            }
-            else
-            {
-                l_ZonaMensaje.Text="La accion fue Cancelada!";
-            }
+            tb_Email.Text = string.Empty;
+            tb_Telefono.Text = string.Empty;
+            comboBox1.SelectedIndex = 0;
+            cc = new ControladorCliente(c);
+            DataTable dt = new DataTable();
+            dt = cc.ConsultarPorTodos();
+            dataGridView1.Refresh();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = dt;
         }
         private void b_Consultar_Click(object sender, EventArgs e)
         {
@@ -360,6 +426,9 @@ namespace Gestion_de_Proyectos.Vista
             b_Guardar.Enabled = true;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+            tb_Email.Text = string.Empty;
+            tb_Telefono.Text = string.Empty;
+            comboBox1.SelectedIndex = 0;
         }
         private void b_Salir_Click(object sender, EventArgs e)
         {
@@ -373,6 +442,9 @@ namespace Gestion_de_Proyectos.Vista
                 tb_Rut.Text = dataGridView1.Rows[e.RowIndex].Cells["rut"].Value.ToString();
                 tb_Nombre.Text = dataGridView1.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
                 tb_Domicilio.Text = dataGridView1.Rows[e.RowIndex].Cells["domicilio"].Value.ToString();
+                comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["comuna"].Value.ToString();
+                tb_Telefono.Text = (string)dataGridView1.Rows[e.RowIndex].Cells["telefono1"].Value;
+                tb_Email.Text = (string)dataGridView1.Rows[e.RowIndex].Cells["email"].Value;
                 b_Guardar.Enabled = false;
                 b_Eliminar.Enabled = true;
                 b_Actualizar.Enabled = true;

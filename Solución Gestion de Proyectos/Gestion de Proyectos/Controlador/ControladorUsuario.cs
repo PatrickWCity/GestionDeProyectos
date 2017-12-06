@@ -20,7 +20,7 @@ namespace Gestion_de_Proyectos.Controlador
             {
                 con = new Connection();
 
-                SqlParameter[] parParameter = new SqlParameter[6];
+                SqlParameter[] parParameter = new SqlParameter[8];
 
                 parParameter[0] = new SqlParameter();
                 parParameter[0].ParameterName = "@run";
@@ -69,8 +69,18 @@ namespace Gestion_de_Proyectos.Controlador
                 parParameter[5] = new SqlParameter();
                 parParameter[5].ParameterName = "@id_localidad";
                 parParameter[5].SqlDbType = SqlDbType.Int;
-                parParameter[5].SqlValue = System.Data.SqlTypes.SqlString.Null;
+                parParameter[5].SqlValue = usuario.id_localidad;
 
+                parParameter[6] = new SqlParameter();
+                parParameter[6].ParameterName = "@telefono";
+                parParameter[6].SqlDbType = SqlDbType.Int;
+                parParameter[6].SqlValue = usuario.telefono;
+
+                parParameter[7] = new SqlParameter();
+                parParameter[7].ParameterName = "@email";
+                parParameter[7].SqlDbType = SqlDbType.VarChar;
+                parParameter[7].Size = 255;
+                parParameter[7].SqlValue = usuario.email;
 
                 con.EjecutarSP("sp_agregarUsuario", parParameter);
             }
@@ -85,7 +95,7 @@ namespace Gestion_de_Proyectos.Controlador
             {
                 con = new Connection();
 
-                SqlParameter[] parParameter = new SqlParameter[7];
+                SqlParameter[] parParameter = new SqlParameter[9];
 
                 parParameter[0] = new SqlParameter();
                 parParameter[0].ParameterName = "@nroInterno";
@@ -136,10 +146,21 @@ namespace Gestion_de_Proyectos.Controlador
                 parParameter[5].Size = 255;
                 parParameter[5].SqlValue = usuario.direccion;
 
-                parParameter[5] = new SqlParameter();
-                parParameter[5].ParameterName = "@id_localidad";
-                parParameter[5].SqlDbType = SqlDbType.Int;
-                parParameter[5].SqlValue = System.Data.SqlTypes.SqlString.Null;
+                parParameter[6] = new SqlParameter();
+                parParameter[6].ParameterName = "@id_localidad";
+                parParameter[6].SqlDbType = SqlDbType.Int;
+                parParameter[6].SqlValue = usuario.id_localidad;
+
+                parParameter[7] = new SqlParameter();
+                parParameter[7].ParameterName = "@telefono";
+                parParameter[7].SqlDbType = SqlDbType.Int;
+                parParameter[7].SqlValue = usuario.telefono;
+
+                parParameter[8] = new SqlParameter();
+                parParameter[8].ParameterName = "@email";
+                parParameter[8].SqlDbType = SqlDbType.VarChar;
+                parParameter[8].Size = 255;
+                parParameter[8].SqlValue = usuario.email;
 
 
                 con.EjecutarSP("sp_actualizarUsuario", parParameter);

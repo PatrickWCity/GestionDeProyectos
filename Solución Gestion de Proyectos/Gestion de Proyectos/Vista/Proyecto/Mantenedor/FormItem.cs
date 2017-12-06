@@ -16,6 +16,8 @@ namespace Gestion_de_Proyectos.Vista
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+
+            l_ZonaMensaje.Text = "";
         }
         private void b_Guardar_Click(object sender, EventArgs e)
         {
@@ -51,6 +53,13 @@ namespace Gestion_de_Proyectos.Vista
                         tb_Nombre.Text = string.Empty;
                         tb_Descripcion.Text = string.Empty;
                         tb_Monto.Text = string.Empty;
+
+                        ci = new ControladorItem(i);
+                        DataTable dt = new DataTable();
+                        dt = ci.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
                 else if (tb_Descripcion.TextLength > 255)
@@ -75,6 +84,13 @@ namespace Gestion_de_Proyectos.Vista
                         tb_Nombre.Text = string.Empty;
                         tb_Descripcion.Text = string.Empty;
                         tb_Monto.Text = string.Empty;
+
+                        ci = new ControladorItem(i);
+                        DataTable dt = new DataTable();
+                        dt = ci.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
             }
@@ -124,6 +140,13 @@ namespace Gestion_de_Proyectos.Vista
                         b_Guardar.Enabled = true;
                         b_Actualizar.Enabled = false;
                         b_Eliminar.Enabled = false;
+
+                        ci = new ControladorItem(i);
+                        DataTable dt = new DataTable();
+                        dt = ci.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
                 else if (tb_Descripcion.TextLength > 255)
@@ -156,15 +179,19 @@ namespace Gestion_de_Proyectos.Vista
                         b_Guardar.Enabled = true;
                         b_Actualizar.Enabled = false;
                         b_Eliminar.Enabled = false;
+
+                        ci = new ControladorItem(i);
+                        DataTable dt = new DataTable();
+                        dt = ci.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
             }
         }
         private void b_Eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Esta seguro que quiere Eliminar este Item ?", "Alerta", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
                 i = new Item();
                 i.id_item = int.Parse(tb_Id_Item.Text);
                 ci = new ControladorItem(i);
@@ -183,15 +210,6 @@ namespace Gestion_de_Proyectos.Vista
                 b_Actualizar.Enabled = false;
                 b_Eliminar.Enabled = false;
                 b_Guardar.Enabled = true;
-            }
-            else if (result == DialogResult.No)
-            {
-                l_ZonaMensaje.Text = "Cancelo la Eliminacion de usuario";
-            }
-            else
-            {
-                l_ZonaMensaje.Text="La accion fue Cancelada!";
-            }
         }
         private void b_Consultar_Click(object sender, EventArgs e)
         {

@@ -22,6 +22,7 @@ namespace Gestion_de_Proyectos.Vista
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+            l_ZonaMensaje.Text = "";
 
             DataTable dt = new DataTable();//usuario
             DataTable dt1 = new DataTable();//proyecto
@@ -107,7 +108,7 @@ namespace Gestion_de_Proyectos.Vista
             cc = new ControladorEmpleadoProyecto(c);
             cc.Ingresar();
 
-            l_ZonaMensaje.Text = "Cliente fue ingresado con exito!";
+            l_ZonaMensaje.Text = "Empleado Asignado con Exito!";
             cb_Proyecto.Text = "Selecionar Proyecto";
             cb_Empleado.Text = "Selecionar Empleado";
             cb_Cargo.Text = "Selecionar Cargo";

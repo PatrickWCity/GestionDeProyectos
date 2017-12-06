@@ -36,6 +36,7 @@
             this.l_ZonaMensaje = new System.Windows.Forms.Label();
             this.l_Password = new System.Windows.Forms.Label();
             this.l_Username = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ll_CambiarClave
@@ -43,7 +44,7 @@
             this.ll_CambiarClave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ll_CambiarClave.AutoSize = true;
             this.ll_CambiarClave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ll_CambiarClave.Location = new System.Drawing.Point(285, 179);
+            this.ll_CambiarClave.Location = new System.Drawing.Point(361, 179);
             this.ll_CambiarClave.Name = "ll_CambiarClave";
             this.ll_CambiarClave.Size = new System.Drawing.Size(111, 19);
             this.ll_CambiarClave.TabIndex = 15;
@@ -55,19 +56,19 @@
             // 
             this.tb_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Password.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Password.Location = new System.Drawing.Point(246, 45);
+            this.tb_Password.Location = new System.Drawing.Point(264, 45);
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '*';
-            this.tb_Password.Size = new System.Drawing.Size(150, 27);
+            this.tb_Password.Size = new System.Drawing.Size(208, 27);
             this.tb_Password.TabIndex = 14;
             // 
             // tb_Username
             // 
             this.tb_Username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Username.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Username.Location = new System.Drawing.Point(246, 12);
+            this.tb_Username.Location = new System.Drawing.Point(264, 12);
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(150, 27);
+            this.tb_Username.Size = new System.Drawing.Size(208, 27);
             this.tb_Username.TabIndex = 13;
             // 
             // b_Cancelar
@@ -75,7 +76,7 @@
             this.b_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Cancelar.AutoSize = true;
             this.b_Cancelar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Cancelar.Location = new System.Drawing.Point(306, 201);
+            this.b_Cancelar.Location = new System.Drawing.Point(382, 201);
             this.b_Cancelar.Name = "b_Cancelar";
             this.b_Cancelar.Size = new System.Drawing.Size(90, 29);
             this.b_Cancelar.TabIndex = 12;
@@ -128,13 +129,27 @@
             this.l_Username.TabIndex = 8;
             this.l_Username.Text = "Username";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSize = true;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(185, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 29);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Restablecer";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.b_Aceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(408, 261);
+            this.BackColor = System.Drawing.Color.LightSalmon;
+            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ll_CambiarClave);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.tb_Username);
@@ -143,6 +158,7 @@
             this.Controls.Add(this.l_ZonaMensaje);
             this.Controls.Add(this.l_Password);
             this.Controls.Add(this.l_Username);
+            this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -161,5 +177,6 @@
         private System.Windows.Forms.Label l_ZonaMensaje;
         private System.Windows.Forms.Label l_Password;
         private System.Windows.Forms.Label l_Username;
+        private System.Windows.Forms.Button button1;
     }
 }

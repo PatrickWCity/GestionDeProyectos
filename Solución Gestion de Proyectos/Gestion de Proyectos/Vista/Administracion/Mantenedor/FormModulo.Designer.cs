@@ -47,6 +47,7 @@
             this.l_Descripcion = new System.Windows.Forms.Label();
             this.l_Nombre = new System.Windows.Forms.Label();
             this.l_Id_Modulo = new System.Windows.Forms.Label();
+            this.b_BN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,11 +98,13 @@
             this.b_Actualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Actualizar.AutoSize = true;
             this.b_Actualizar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Actualizar.Location = new System.Drawing.Point(656, 43);
+            this.b_Actualizar.Image = global::Gestion_de_Proyectos.Properties.Resources.pencil;
+            this.b_Actualizar.Location = new System.Drawing.Point(631, 43);
             this.b_Actualizar.Name = "b_Actualizar";
-            this.b_Actualizar.Size = new System.Drawing.Size(116, 29);
+            this.b_Actualizar.Size = new System.Drawing.Size(141, 29);
             this.b_Actualizar.TabIndex = 86;
             this.b_Actualizar.Text = "Acualizar";
+            this.b_Actualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Actualizar.UseVisualStyleBackColor = true;
             this.b_Actualizar.Click += new System.EventHandler(this.b_Actualizar_Click);
             // 
@@ -110,11 +113,13 @@
             this.b_Guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Guardar.AutoSize = true;
             this.b_Guardar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Guardar.Location = new System.Drawing.Point(656, 10);
+            this.b_Guardar.Image = global::Gestion_de_Proyectos.Properties.Resources.plus;
+            this.b_Guardar.Location = new System.Drawing.Point(631, 10);
             this.b_Guardar.Name = "b_Guardar";
-            this.b_Guardar.Size = new System.Drawing.Size(116, 29);
+            this.b_Guardar.Size = new System.Drawing.Size(141, 29);
             this.b_Guardar.TabIndex = 85;
             this.b_Guardar.Text = "Guardar";
+            this.b_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Guardar.UseVisualStyleBackColor = true;
             this.b_Guardar.Click += new System.EventHandler(this.b_Guardar_Click);
             // 
@@ -145,11 +150,13 @@
             this.b_Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Salir.AutoSize = true;
             this.b_Salir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Salir.Location = new System.Drawing.Point(656, 142);
+            this.b_Salir.Image = global::Gestion_de_Proyectos.Properties.Resources.times;
+            this.b_Salir.Location = new System.Drawing.Point(631, 142);
             this.b_Salir.Name = "b_Salir";
-            this.b_Salir.Size = new System.Drawing.Size(116, 29);
+            this.b_Salir.Size = new System.Drawing.Size(141, 29);
             this.b_Salir.TabIndex = 82;
             this.b_Salir.Text = "Salir";
+            this.b_Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Salir.UseVisualStyleBackColor = true;
             this.b_Salir.Click += new System.EventHandler(this.b_Salir_Click);
             // 
@@ -170,11 +177,13 @@
             this.b_Restablecer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Restablecer.AutoSize = true;
             this.b_Restablecer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Restablecer.Location = new System.Drawing.Point(656, 109);
+            this.b_Restablecer.Image = global::Gestion_de_Proyectos.Properties.Resources.eraser;
+            this.b_Restablecer.Location = new System.Drawing.Point(631, 109);
             this.b_Restablecer.Name = "b_Restablecer";
-            this.b_Restablecer.Size = new System.Drawing.Size(116, 29);
+            this.b_Restablecer.Size = new System.Drawing.Size(141, 29);
             this.b_Restablecer.TabIndex = 80;
             this.b_Restablecer.Text = "Restablecer";
+            this.b_Restablecer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Restablecer.UseVisualStyleBackColor = true;
             this.b_Restablecer.Click += new System.EventHandler(this.b_Restablecer_Click);
             // 
@@ -183,11 +192,13 @@
             this.b_Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Eliminar.AutoSize = true;
             this.b_Eliminar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Eliminar.Location = new System.Drawing.Point(656, 76);
+            this.b_Eliminar.Image = global::Gestion_de_Proyectos.Properties.Resources.trash;
+            this.b_Eliminar.Location = new System.Drawing.Point(631, 76);
             this.b_Eliminar.Name = "b_Eliminar";
-            this.b_Eliminar.Size = new System.Drawing.Size(116, 29);
+            this.b_Eliminar.Size = new System.Drawing.Size(141, 29);
             this.b_Eliminar.TabIndex = 79;
             this.b_Eliminar.Text = "Eliminar";
+            this.b_Eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Eliminar.UseVisualStyleBackColor = true;
             this.b_Eliminar.Click += new System.EventHandler(this.b_Eliminar_Click);
             // 
@@ -196,11 +207,13 @@
             this.b_Consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Consultar.AutoSize = true;
             this.b_Consultar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Consultar.Location = new System.Drawing.Point(656, 177);
+            this.b_Consultar.Image = global::Gestion_de_Proyectos.Properties.Resources.eye;
+            this.b_Consultar.Location = new System.Drawing.Point(631, 177);
             this.b_Consultar.Name = "b_Consultar";
-            this.b_Consultar.Size = new System.Drawing.Size(116, 29);
+            this.b_Consultar.Size = new System.Drawing.Size(141, 29);
             this.b_Consultar.TabIndex = 78;
             this.b_Consultar.Text = "Consultar";
+            this.b_Consultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Consultar.UseVisualStyleBackColor = true;
             this.b_Consultar.Click += new System.EventHandler(this.b_Consultar_Click);
             // 
@@ -209,15 +222,15 @@
             this.tb_Descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Descripcion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Descripcion.Location = new System.Drawing.Point(120, 45);
+            this.tb_Descripcion.Location = new System.Drawing.Point(125, 78);
             this.tb_Descripcion.Name = "tb_Descripcion";
-            this.tb_Descripcion.Size = new System.Drawing.Size(530, 27);
+            this.tb_Descripcion.Size = new System.Drawing.Size(486, 27);
             this.tb_Descripcion.TabIndex = 93;
             // 
             // tb_Nombre
             // 
             this.tb_Nombre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Nombre.Location = new System.Drawing.Point(120, 12);
+            this.tb_Nombre.Location = new System.Drawing.Point(125, 45);
             this.tb_Nombre.Name = "tb_Nombre";
             this.tb_Nombre.Size = new System.Drawing.Size(486, 27);
             this.tb_Nombre.TabIndex = 92;
@@ -225,7 +238,7 @@
             // tb_Id_Modulo
             // 
             this.tb_Id_Modulo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Id_Modulo.Location = new System.Drawing.Point(386, 179);
+            this.tb_Id_Modulo.Location = new System.Drawing.Point(125, 12);
             this.tb_Id_Modulo.Name = "tb_Id_Modulo";
             this.tb_Id_Modulo.Size = new System.Drawing.Size(100, 27);
             this.tb_Id_Modulo.TabIndex = 91;
@@ -234,7 +247,7 @@
             // 
             this.l_Descripcion.AutoSize = true;
             this.l_Descripcion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Descripcion.Location = new System.Drawing.Point(12, 48);
+            this.l_Descripcion.Location = new System.Drawing.Point(17, 81);
             this.l_Descripcion.Name = "l_Descripcion";
             this.l_Descripcion.Size = new System.Drawing.Size(102, 19);
             this.l_Descripcion.TabIndex = 90;
@@ -244,7 +257,7 @@
             // 
             this.l_Nombre.AutoSize = true;
             this.l_Nombre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Nombre.Location = new System.Drawing.Point(12, 15);
+            this.l_Nombre.Location = new System.Drawing.Point(17, 48);
             this.l_Nombre.Name = "l_Nombre";
             this.l_Nombre.Size = new System.Drawing.Size(73, 19);
             this.l_Nombre.TabIndex = 89;
@@ -254,11 +267,27 @@
             // 
             this.l_Id_Modulo.AutoSize = true;
             this.l_Id_Modulo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Id_Modulo.Location = new System.Drawing.Point(337, 182);
+            this.l_Id_Modulo.Location = new System.Drawing.Point(17, 15);
             this.l_Id_Modulo.Name = "l_Id_Modulo";
-            this.l_Id_Modulo.Size = new System.Drawing.Size(43, 19);
+            this.l_Id_Modulo.Size = new System.Drawing.Size(28, 19);
             this.l_Id_Modulo.TabIndex = 88;
-            this.l_Id_Modulo.Text = "o ID";
+            this.l_Id_Modulo.Text = "ID";
+            // 
+            // b_BN
+            // 
+            this.b_BN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_BN.AutoSize = true;
+            this.b_BN.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.b_BN.BackColor = System.Drawing.Color.Black;
+            this.b_BN.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_BN.ForeColor = System.Drawing.Color.White;
+            this.b_BN.Location = new System.Drawing.Point(732, 432);
+            this.b_BN.Name = "b_BN";
+            this.b_BN.Size = new System.Drawing.Size(40, 24);
+            this.b_BN.TabIndex = 94;
+            this.b_BN.Text = "B/N";
+            this.b_BN.UseVisualStyleBackColor = false;
+            this.b_BN.Click += new System.EventHandler(this.b_BN_Click);
             // 
             // FormModulo
             // 
@@ -266,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.b_BN);
             this.Controls.Add(this.tb_Descripcion);
             this.Controls.Add(this.tb_Nombre);
             this.Controls.Add(this.tb_Id_Modulo);
@@ -313,5 +343,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_modulo1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.Button b_BN;
     }
 }

@@ -14,6 +14,7 @@ namespace Gestion_de_Proyectos.Vista
         public Login()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
+            l_ZonaMensaje.Text = string.Empty;
         }
 
         private void b_Aceptar_Click(object sender, EventArgs e)
@@ -50,7 +51,9 @@ namespace Gestion_de_Proyectos.Vista
                     ca.ConsultaAccesoHabilitado();
                     DataTable dt4 = new DataTable();
                     dt4 = ca.ConsultaAccesoHabilitado();
-                    if (dt4.Rows.Count == 1)
+                    string habilitado = dt4.Rows[0][0].ToString();
+                    if (habilitado == "1")
+                    //if (dt4.Rows.Count == 1)
                     {
                         a = new Acceso();
                         a.username = tb_Username.Text;
@@ -87,6 +90,8 @@ namespace Gestion_de_Proyectos.Vista
                                     if (dias > 7)
                                     {
                                         l_ZonaMensaje.Text = "Debe cambiar la Clave, su Clave ha caducado.";
+                                        CambiarClave cc = new CambiarClave();
+                                        cc.Show();
                                     }
                                     else
                                     {
@@ -105,6 +110,8 @@ namespace Gestion_de_Proyectos.Vista
                             else
                             {
                                 l_ZonaMensaje.Text = "Debe Cambiar la Clave, para ingresar por primera Vez.";
+                                CambiarClave cc = new CambiarClave();
+                                cc.Show();
                             }
                         }
 
@@ -135,6 +142,13 @@ namespace Gestion_de_Proyectos.Vista
         private void b_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close(); //dispose
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tb_Username.Text = string.Empty;
+            tb_Password.Text = string.Empty;
+            tb_Username.Focus();
         }
     }
 }

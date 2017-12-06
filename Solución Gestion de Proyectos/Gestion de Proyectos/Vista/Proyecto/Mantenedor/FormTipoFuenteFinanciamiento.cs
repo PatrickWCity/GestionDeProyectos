@@ -16,6 +16,8 @@ namespace Gestion_de_Proyectos.Vista
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+            l_ZonaMensaje.Text = "";
+
         }
         private void b_Guardar_Click(object sender, EventArgs e)
         {
@@ -43,6 +45,13 @@ namespace Gestion_de_Proyectos.Vista
                     l_ZonaMensaje.Text="TipoFuenteFinanciamiento fue ingresado con exito!";
                     tb_Nombre.Text = string.Empty;
                     tb_Descripcion.Text = string.Empty;
+
+                    ctff = new ControladorTipoFuenteFinanciamiento(tff);
+                    DataTable dt = new DataTable();
+                    dt = ctff.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
                 else if (tb_Descripcion.TextLength > 255)
                 {
@@ -58,6 +67,13 @@ namespace Gestion_de_Proyectos.Vista
                     l_ZonaMensaje.Text="TipoFuenteFinanciamiento fue ingresado con exito!";
                     tb_Nombre.Text = string.Empty;
                     tb_Descripcion.Text = string.Empty;
+
+                    ctff = new ControladorTipoFuenteFinanciamiento(tff);
+                    DataTable dt = new DataTable();
+                    dt = ctff.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
             }
         }
@@ -97,6 +113,13 @@ namespace Gestion_de_Proyectos.Vista
                     b_Guardar.Enabled = true;
                     b_Actualizar.Enabled = false;
                     b_Eliminar.Enabled = false;
+
+                    ctff = new ControladorTipoFuenteFinanciamiento(tff);
+                    DataTable dt = new DataTable();
+                    dt = ctff.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
                 else if (tb_Descripcion.TextLength > 255)
                 {
@@ -120,14 +143,18 @@ namespace Gestion_de_Proyectos.Vista
                     b_Guardar.Enabled = true;
                     b_Actualizar.Enabled = false;
                     b_Eliminar.Enabled = false;
+
+                    ctff = new ControladorTipoFuenteFinanciamiento(tff);
+                    DataTable dt = new DataTable();
+                    dt = ctff.ConsultarPorTodos();
+                    dataGridView1.Refresh();
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = dt;
                 }
             }
         }
         private void b_Eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Esta seguro que quiere Eliminar este TipoFuenteFinanciamiento ?", "Alerta", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
                 tff = new TipoFuenteFinanciamiento();
                 tff.id_tff = int.Parse(tb_Id_TipoFuenteFinanciamiento.Text);
                 ctff = new ControladorTipoFuenteFinanciamiento(tff);
@@ -144,15 +171,13 @@ namespace Gestion_de_Proyectos.Vista
                 b_Actualizar.Enabled = false;
                 b_Eliminar.Enabled = false;
                 b_Guardar.Enabled = true;
-            }
-            else if (result == DialogResult.No)
-            {
-                l_ZonaMensaje.Text = "Cancelo la Eliminacion de usuario";
-            }
-            else
-            {
-                l_ZonaMensaje.Text="La accion fue Cancelada!";
-            }
+
+            ctff = new ControladorTipoFuenteFinanciamiento(tff);
+            DataTable dt = new DataTable();
+            dt = ctff.ConsultarPorTodos();
+            dataGridView1.Refresh();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = dt;
         }
         private void b_Consultar_Click(object sender, EventArgs e)
         {

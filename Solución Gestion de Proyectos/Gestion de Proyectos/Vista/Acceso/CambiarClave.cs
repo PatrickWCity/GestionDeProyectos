@@ -15,6 +15,7 @@ namespace Gestion_de_Proyectos.Vista
         public CambiarClave()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
+            l_ZonaMensaje.Text = string.Empty;
         }
 
         private void b_CambiarClave_Click(object sender, EventArgs e)
@@ -85,6 +86,15 @@ namespace Gestion_de_Proyectos.Vista
             FortalezaPassword.PasswordStrength strength;
             strength = checker.GetPasswordStrength(tb_ClaveNueva.Text.ToString());
             l_ZonaMensaje.Text = strength.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tb_ClaveActual.Text = string.Empty;
+            tb_ClaveNueva.Text = string.Empty;
+            tb_ConfirmarClaveNueva.Text = string.Empty;
+            tb_Username.Text = string.Empty;
+            tb_Username.Focus();
         }
     }
 }

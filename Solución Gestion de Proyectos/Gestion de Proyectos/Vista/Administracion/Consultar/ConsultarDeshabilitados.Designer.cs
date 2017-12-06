@@ -37,6 +37,7 @@
             this.appat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apmat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b_BN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,19 +130,38 @@
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
             // 
+            // b_BN
+            // 
+            this.b_BN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_BN.AutoSize = true;
+            this.b_BN.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.b_BN.BackColor = System.Drawing.Color.Black;
+            this.b_BN.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_BN.ForeColor = System.Drawing.Color.White;
+            this.b_BN.Location = new System.Drawing.Point(283, 429);
+            this.b_BN.Name = "b_BN";
+            this.b_BN.Size = new System.Drawing.Size(40, 24);
+            this.b_BN.TabIndex = 17;
+            this.b_BN.Text = "B/N";
+            this.b_BN.UseVisualStyleBackColor = false;
+            this.b_BN.Click += new System.EventHandler(this.b_BN_Click);
+            // 
             // ConsultarDeshabilitados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 465);
+            this.Controls.Add(this.b_BN);
             this.Controls.Add(this.b_salir);
             this.Controls.Add(this.b_Consultar);
             this.Controls.Add(this.dataGridView1);
             this.MinimumSize = new System.Drawing.Size(644, 504);
             this.Name = "ConsultarDeshabilitados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultarDeshabilitados";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -156,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn appat;
         private System.Windows.Forms.DataGridViewTextBoxColumn apmat;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.Button b_BN;
     }
 }

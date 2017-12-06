@@ -1,5 +1,4 @@
-﻿using Gestion_de_Proyectos.Vista;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Gestion_de_Proyectos

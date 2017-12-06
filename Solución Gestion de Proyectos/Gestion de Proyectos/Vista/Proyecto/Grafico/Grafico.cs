@@ -63,7 +63,7 @@ namespace Gestion_de_Proyectos.Vista
 
             
             chart.DataSource = cp.ConsultarGraficoGEGPProyecto();
-            chart.Series["Gasto Presupuesto"].XValueMember = "fechaInicio";
+            chart.Series["Gasto Presupuesto"].XValueMember = "fechaTermino";
             chart.Series["Gasto Presupuesto"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             chart.Series["Gasto Presupuesto"].YValueMembers = "Presupuesto";
             chart.Series["Gasto Presupuesto"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int64;

@@ -19,6 +19,8 @@ namespace Gestion_de_Proyectos.Vista
             InitializeComponent();
             Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
+            l_ZonaMensaje.Text = "";
+
             b_Eliminar.Enabled = false;
 
             DataTable dt = new DataTable();//presupuesto

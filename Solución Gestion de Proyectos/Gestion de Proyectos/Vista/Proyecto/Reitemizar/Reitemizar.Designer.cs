@@ -90,7 +90,7 @@
             this.tb_Nombre1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Nombre1.Location = new System.Drawing.Point(93, 44);
             this.tb_Nombre1.Name = "tb_Nombre1";
-            this.tb_Nombre1.Size = new System.Drawing.Size(186, 27);
+            this.tb_Nombre1.Size = new System.Drawing.Size(177, 27);
             this.tb_Nombre1.TabIndex = 110;
             // 
             // l_Nombre1
@@ -168,11 +168,13 @@
             this.b_Actualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Actualizar.AutoSize = true;
             this.b_Actualizar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Actualizar.Location = new System.Drawing.Point(556, 9);
+            this.b_Actualizar.Image = global::Gestion_de_Proyectos.Properties.Resources.pencil;
+            this.b_Actualizar.Location = new System.Drawing.Point(531, 9);
             this.b_Actualizar.Name = "b_Actualizar";
-            this.b_Actualizar.Size = new System.Drawing.Size(116, 29);
+            this.b_Actualizar.Size = new System.Drawing.Size(141, 29);
             this.b_Actualizar.TabIndex = 104;
             this.b_Actualizar.Text = "Acualizar";
+            this.b_Actualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Actualizar.UseVisualStyleBackColor = true;
             this.b_Actualizar.Click += new System.EventHandler(this.b_Actualizar_Click);
             // 
@@ -181,11 +183,13 @@
             this.b_Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Salir.AutoSize = true;
             this.b_Salir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Salir.Location = new System.Drawing.Point(556, 77);
+            this.b_Salir.Image = global::Gestion_de_Proyectos.Properties.Resources.times;
+            this.b_Salir.Location = new System.Drawing.Point(531, 77);
             this.b_Salir.Name = "b_Salir";
-            this.b_Salir.Size = new System.Drawing.Size(116, 29);
+            this.b_Salir.Size = new System.Drawing.Size(141, 29);
             this.b_Salir.TabIndex = 100;
             this.b_Salir.Text = "Salir";
+            this.b_Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Salir.UseVisualStyleBackColor = true;
             this.b_Salir.Click += new System.EventHandler(this.b_Salir_Click);
             // 
@@ -206,11 +210,13 @@
             this.b_Restablecer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Restablecer.AutoSize = true;
             this.b_Restablecer.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Restablecer.Location = new System.Drawing.Point(556, 44);
+            this.b_Restablecer.Image = global::Gestion_de_Proyectos.Properties.Resources.eraser;
+            this.b_Restablecer.Location = new System.Drawing.Point(531, 44);
             this.b_Restablecer.Name = "b_Restablecer";
-            this.b_Restablecer.Size = new System.Drawing.Size(116, 29);
+            this.b_Restablecer.Size = new System.Drawing.Size(141, 29);
             this.b_Restablecer.TabIndex = 98;
             this.b_Restablecer.Text = "Restablecer";
+            this.b_Restablecer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Restablecer.UseVisualStyleBackColor = true;
             this.b_Restablecer.Click += new System.EventHandler(this.b_Restablecer_Click);
             // 
@@ -219,11 +225,13 @@
             this.b_Consultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.b_Consultar.AutoSize = true;
             this.b_Consultar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_Consultar.Location = new System.Drawing.Point(556, 112);
+            this.b_Consultar.Image = global::Gestion_de_Proyectos.Properties.Resources.eye;
+            this.b_Consultar.Location = new System.Drawing.Point(531, 112);
             this.b_Consultar.Name = "b_Consultar";
-            this.b_Consultar.Size = new System.Drawing.Size(116, 29);
+            this.b_Consultar.Size = new System.Drawing.Size(141, 29);
             this.b_Consultar.TabIndex = 96;
             this.b_Consultar.Text = "Consultar";
+            this.b_Consultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.b_Consultar.UseVisualStyleBackColor = true;
             this.b_Consultar.Click += new System.EventHandler(this.b_Consultar_Click);
             // 
@@ -252,7 +260,7 @@
             this.tb_Nombre2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Nombre2.Location = new System.Drawing.Point(364, 44);
             this.tb_Nombre2.Name = "tb_Nombre2";
-            this.tb_Nombre2.Size = new System.Drawing.Size(186, 27);
+            this.tb_Nombre2.Size = new System.Drawing.Size(161, 27);
             this.tb_Nombre2.TabIndex = 115;
             // 
             // l_Nombre2

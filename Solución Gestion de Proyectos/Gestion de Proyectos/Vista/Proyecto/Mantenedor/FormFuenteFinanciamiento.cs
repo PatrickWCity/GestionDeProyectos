@@ -20,6 +20,7 @@ namespace Gestion_de_Proyectos.Vista
             Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+            l_ZonaMensaje.Text = "";
 
             DataTable dt = new DataTable();//presupuesto
             DataTable dt1 = new DataTable();//cliente
@@ -66,9 +67,6 @@ namespace Gestion_de_Proyectos.Vista
                 l_ZonaMensaje.Text = "FuenteFinanciamiento fue ingresado con exito!";
                 cb_TipoFuenteFinanciamiento.SelectedValue = 0;//funciona bien este!!!! para el combobox
 
-                b_Guardar.Enabled = false;
-                b_Actualizar.Enabled = true;
-                b_Eliminar.Enabled = true;
 
                 cp = new ControladorFuenteFinanciamiento(p);
                 DataTable dt2 = new DataTable();

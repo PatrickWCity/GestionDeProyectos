@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Gestion_de_Proyectos.Modelo;
 using Gestion_de_Proyectos.Controlador;
+using System.Drawing;
 
 namespace Gestion_de_Proyectos.Vista
 {
@@ -10,12 +11,36 @@ namespace Gestion_de_Proyectos.Vista
     {
         Submodulo s = null;
         ControladorSubmodulo cs = null;
-        int id_Submodulo;
+        int id_Submodulo,swbn;
         public FormSubmodulo()
         {
             InitializeComponent(); Icon = Properties.Resources.Icon;
             b_Actualizar.Enabled = false;
             b_Eliminar.Enabled = false;
+            l_ZonaMensaje.Text = "";
+            swbn = (int)Properties.Settings.Default["Submodulo"];
+            if (swbn == 1)
+            {
+                l_Descripcion.ForeColor = DefaultBackColor;
+                l_Id_Submodulo.ForeColor = DefaultBackColor;
+                l_Nombre.ForeColor = DefaultBackColor;
+                l_PalabraClave.ForeColor = DefaultBackColor;
+                l_Ubicacion.ForeColor = DefaultBackColor;
+                l_ZonaMensaje.ForeColor = DefaultBackColor;
+
+                BackColor = DefaultForeColor;
+            }
+            else
+            {
+                l_Descripcion.ForeColor = DefaultForeColor;
+                l_Id_Submodulo.ForeColor = DefaultForeColor;
+                l_Nombre.ForeColor = DefaultForeColor;
+                l_PalabraClave.ForeColor = DefaultForeColor;
+                l_Ubicacion.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                BackColor = Color.LightSalmon;
+            }
         }
         private void b_Guardar_Click(object sender, EventArgs e)
         {
@@ -57,6 +82,13 @@ namespace Gestion_de_Proyectos.Vista
                         tb_Nombre.Text = string.Empty;
                         tb_Descripcion.Text = string.Empty;
                         tb_Ubicacion.Text = string.Empty;
+
+                        cs = new ControladorSubmodulo(s);
+                        DataTable dt = new DataTable();
+                        dt = cs.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
                 else if (tb_Descripcion.TextLength > 255)
@@ -86,6 +118,13 @@ namespace Gestion_de_Proyectos.Vista
                         tb_Nombre.Text = string.Empty;
                         tb_Descripcion.Text = string.Empty;
                         tb_Ubicacion.Text = string.Empty;
+
+                        cs = new ControladorSubmodulo(s);
+                        DataTable dt = new DataTable();
+                        dt = cs.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
             }
@@ -138,6 +177,13 @@ namespace Gestion_de_Proyectos.Vista
                         b_Guardar.Enabled = true;
                         b_Actualizar.Enabled = false;
                         b_Eliminar.Enabled = false;
+
+                        cs = new ControladorSubmodulo(s);
+                        DataTable dt = new DataTable();
+                        dt = cs.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
                 else if (tb_Descripcion.TextLength > 255)
@@ -174,15 +220,19 @@ namespace Gestion_de_Proyectos.Vista
                         b_Guardar.Enabled = true;
                         b_Actualizar.Enabled = false;
                         b_Eliminar.Enabled = false;
+
+                        cs = new ControladorSubmodulo(s);
+                        DataTable dt = new DataTable();
+                        dt = cs.ConsultarPorTodos();
+                        dataGridView1.Refresh();
+                        dataGridView1.AutoGenerateColumns = false;
+                        dataGridView1.DataSource = dt;
                     }
                 }
             }
         }
         private void b_Eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Esta seguro que quiere Eliminar este Submodulo ?", "Alerta", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
                 s = new Submodulo();
                 s.id_submodulo = int.Parse(tb_Id_Submodulo.Text);
                 cs = new ControladorSubmodulo(s);
@@ -201,15 +251,12 @@ namespace Gestion_de_Proyectos.Vista
                 b_Actualizar.Enabled = false;
                 b_Eliminar.Enabled = false;
                 b_Guardar.Enabled = true;
-            }
-            else if (result == DialogResult.No)
-            {
-                l_ZonaMensaje.Text = "Cancelo la Eliminacion de usuario";
-            }
-            else
-            {
-                l_ZonaMensaje.Text="La accion fue Cancelada!";
-            }
+                cs = new ControladorSubmodulo(s);
+                DataTable dt = new DataTable();
+                dt = cs.ConsultarPorTodos();
+                dataGridView1.Refresh();
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = dt;
         }
         private void b_Consultar_Click(object sender, EventArgs e)
         {
@@ -393,6 +440,38 @@ namespace Gestion_de_Proyectos.Vista
             {
 
             }
+        }
+
+        private void b_BN_Click(object sender, EventArgs e)
+        {
+            if (swbn == 0)
+            {
+
+                l_Descripcion.ForeColor = DefaultBackColor;
+                l_Id_Submodulo.ForeColor = DefaultBackColor;
+                l_Nombre.ForeColor = DefaultBackColor;
+                l_PalabraClave.ForeColor = DefaultBackColor;
+                l_Ubicacion.ForeColor = DefaultBackColor;
+                l_ZonaMensaje.ForeColor = DefaultBackColor;
+
+                BackColor = DefaultForeColor;
+                swbn = 1;
+            }
+            else
+            {
+                l_Descripcion.ForeColor = DefaultForeColor;
+                l_Id_Submodulo.ForeColor = DefaultForeColor;
+                l_Nombre.ForeColor = DefaultForeColor;
+                l_PalabraClave.ForeColor = DefaultForeColor;
+                l_Ubicacion.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                l_ZonaMensaje.ForeColor = DefaultForeColor;
+                BackColor = Color.LightSalmon;
+                swbn = 0;
+            }
+            Properties.Settings.Default["Submodulo"] = swbn;
+            Properties.Settings.Default.Save();
         }
     }
 }
